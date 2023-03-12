@@ -1,0 +1,176 @@
+:root {
+    --primary-color: #ca1f24;
+    --primary-color-bold: #95161a;
+    --white-color: #fff;
+    --black-color: #000;
+    --white-color-blur: #f4f4f4;
+    --grey-color: #ccc;
+    --pink-color-blur: #fef3f5;
+    --yellow-color-blur: #fdfef3;
+    --blue-color-blur: #f3f6fe;
+
+    --border-radius-main: 8px;
+    --border-radius-mini: 4px;
+    --box-shadow: 0 0 0 0.25rem rgb(253 13 13 / 11%);
+
+    --width-sidebar: 275px;
+
+    /* FontSize */
+    --fz-10: 1rem;
+    --fz-12: 1.2rem;
+    --fz-14: 1.4rem;
+    --fz-16: 1.6rem;
+    --fz-18: 1.8rem;
+    --fz-20: 2rem;
+    --fz-22: 2.2rem;
+    --fz-24: 2.4rem;
+    --fz-26: 2.6rem;
+    --fz-28: 2.8rem;
+}
+
+/* GLOBAL */
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    overscroll-behavior: contain;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: none !important;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+input,
+textarea {
+    border: 1px solid var(--white-color-blur) !important;
+}
+input:focus,
+textarea:focus {
+    border: 1px solid var(--primary-color) !important;
+    box-shadow: var(--box-shadow) !important;
+    outline: none;
+}
+
+select optgroup {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+option:hover {
+    background-color: red !important;
+}
+
+.bs-searchbox .form-control:focus {
+    box-shadow: none;
+    border: 1px solid var(--primary-color);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: var(--primary-color);
+}
+
+/* STYLE SCROLLBAR */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+/* *:hover::-webkit-scrollbar {
+    height: 10px;
+    transition: height 5s ease-in-out;
+    background-color: transparent;
+} */
+
+::-webkit-scrollbar-track {
+    background-color: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-color-bold);
+}
+.bootstrap-select .btn:focus {
+    outline: none !important;
+}
+
+/* LOADER */
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 0 !important;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    animation: spotlight 2s linear infinite alternate;
+    z-index: 1995;
+}
+
+.loader:before {
+    content: '';
+    background-image: url(../img/logo-thaihung-1.jpg);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: heartbeat 3.5s linear infinite alternate;
+}
+
+@keyframes spotlight {
+    0%,
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes heartbeat {
+    0% {
+        transform: scale(0.75);
+    }
+    20% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(0.75);
+    }
+    60% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(0.75);
+    }
+    100% {
+        transform: scale(0.75);
+    }
+}
