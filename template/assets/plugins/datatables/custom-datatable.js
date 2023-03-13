@@ -87,5 +87,45 @@ Author url    :  https://publicsite.pro
             },
             dom: '<"dataTables_top justify-content-end"f>rt<"dataTables_bottom"ip>',
         });
+        $('#coCauToChuc').DataTable({
+            paging: true,
+            ordering: true,
+            language: {
+                info: 'Hiển thị _START_ đến _END_ trên _TOTAL_ bản ghi',
+                infoEmpty: 'Hiện tại chưa có biên bản họp nào',
+                search: 'Tìm kiếm biên bản',
+                paginate: {
+                    previous: '<i class="bi bi-caret-left-fill"></i>',
+                    next: '<i class="bi bi-caret-right-fill"></i>',
+                },
+                search: '',
+                searchPlaceholder: 'Tìm kiếm...',
+                zeroRecords: 'Không tìm thấy kết quả',
+            },
+            oLanguage: {
+                sLengthMenu: 'Hiển thị _MENU_ biên bản họp',
+            },
+            dom: '<"dataTables_top"<"demodemo">f>rt<"dataTables_bottom"ip>',
+        });
+        $('div.demodemo').html(`
+        <div class="info_wrapper">
+    <div class="info_content">
+        <div class="info_label">Mã đơn vị:&nbsp;</div>
+        <div class="info_content">OTC</div>
+    </div>
+    <div class="info_content">
+        <div class="info_label">Cấp tổ chức:&nbsp;</div>
+        <div class="info_content">Bộ phận trực thuộc</div>
+    </div>
+    <div class="info_content">
+        <div class="info_label">Tên viết tắt:&nbsp;</div>
+        <div class="info_content">OTC</div>
+    </div>
+    
+</div>
+<div class="info_content">
+        <div class="info_label">Chức năng, nhiệm vụ:&nbsp;</div>
+        <div class="info_content"> ....</div>
+    </div>`);
     });
 })(jQuery);

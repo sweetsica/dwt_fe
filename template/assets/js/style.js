@@ -28,56 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.title = docTitle;
     });
 
-    // SELECT MULTIPLE LEFT SIDEBAR
-    const select = document.getElementById('select');
-    const elems = document.querySelectorAll('.data_chart-items');
-    const obj = {};
-
-    const filtered = [...elems].filter((el) => {
-        if (!obj[el.id]) {
-            obj[el.id] = true;
-            return true;
-        } else {
-            return false;
-        }
-    });
-
-    const selectOpt = filtered.map((el) => {
-        el.style.display = 'block';
-        return `<option> ${el.id} </option>`;
-    });
-
-    select.innerHTML = selectOpt.join('');
-
-    select.addEventListener('change', function () {
-        for (let i = 0, iLen = select.options.length; i < iLen; i++) {
-            const opt = select.options[i];
-
-            const val = opt.value || opt.text;
-            if (opt.selected) {
-                // if (opt.innerText === 'Xem tất cả') {
-                //     var items = document.getElementsByClassName('data_chart-items');
-                //     for (i = 0; i < items.length; i++) {
-                //         items[i].style.display = 'block';
-                //     }
-                //     return;
-                // }
-                document.getElementById(val).style.display = 'block';
-            } else {
-                document.getElementById(val).style.display = 'none';
-            }
-        }
-    });
-
-    // const selectPicker = document.getElementById('mySelect');
-    // const labelPicker = document.getElementById('label');
-    // const valuePicker = document.getElementById('value');
-
-    // selectPicker.addEventListener('change', function () {
-    //     labelPicker.textContent = selectPicker.options[selectPicker.selectedIndex].parentNode.label;
-    //     valuePicker.textContent = selectPicker.value;
-    // });
-
     // BTN SHOW/HIDE LEFT RIGHT
     const mainWrap = document.getElementById('mainWrap');
     const asideLeft = document.getElementById('aside-left');
@@ -149,6 +99,56 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('btn-right').addEventListener('click', function () {
         handleChangeIconRight(document.querySelector('#btn-right i'));
     });
+
+    // SELECT MULTIPLE LEFT SIDEBAR
+    const select = document.getElementById('select');
+    const elems = document.querySelectorAll('.data_chart-items');
+    const obj = {};
+
+    const filtered = [...elems].filter((el) => {
+        if (!obj[el.id]) {
+            obj[el.id] = true;
+            return true;
+        } else {
+            return false;
+        }
+    });
+
+    const selectOpt = filtered.map((el) => {
+        el.style.display = 'block';
+        return `<option> ${el.id} </option>`;
+    });
+
+    select.innerHTML = selectOpt.join('');
+
+    select.addEventListener('change', function () {
+        for (let i = 0, iLen = select.options.length; i < iLen; i++) {
+            const opt = select.options[i];
+
+            const val = opt.value || opt.text;
+            if (opt.selected) {
+                // if (opt.innerText === 'Xem tất cả') {
+                //     var items = document.getElementsByClassName('data_chart-items');
+                //     for (i = 0; i < items.length; i++) {
+                //         items[i].style.display = 'block';
+                //     }
+                //     return;
+                // }
+                document.getElementById(val).style.display = 'block';
+            } else {
+                document.getElementById(val).style.display = 'none';
+            }
+        }
+    });
+
+    // const selectPicker = document.getElementById('mySelect');
+    // const labelPicker = document.getElementById('label');
+    // const valuePicker = document.getElementById('value');
+
+    // selectPicker.addEventListener('change', function () {
+    //     labelPicker.textContent = selectPicker.options[selectPicker.selectedIndex].parentNode.label;
+    //     valuePicker.textContent = selectPicker.value;
+    // });
 
     // BTN SETTINGS
     document.getElementById('sidebarBody_settings-body').addEventListener('click', handleClickSettings, false);

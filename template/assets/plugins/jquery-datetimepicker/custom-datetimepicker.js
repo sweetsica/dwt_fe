@@ -12,18 +12,36 @@ Author url    :  https://publicsite.pro
 $(function () {
     'use strict';
     // initialize input widgets first
-    $('#date_time-hopgiaoban .time').timepicker({
-        showDuration: true,
-        timeFormat: 'g:ia',
-    });
+    // $('#date_time-hopgiaoban .time').timepicker({
+    //     showDuration: true,
+    //     timeFormat: 'g:ia',
+    // });
 
-    $('#date_time-hopgiaoban .date').datepicker({
-        format: 'd/m/yyyy',
-        autoclose: true,
-        showDuration: true,
-    });
+    // $('#date_time-hopgiaoban .date').datepicker({
+    //     format: 'd/m/yyyy',
+    //     autoclose: true,
+    //     showDuration: true,
+    // });
 
-    // initialize datepair
-    var dateTimeHopgiaobanEl = document.getElementById('date_time-hopgiaoban');
-    var datepair = new Datepair(dateTimeHopgiaobanEl);
+    // // initialize datepair
+    // var dateTimeHopgiaobanEl = document.getElementById('date_time-hopgiaoban');
+    // var datepair = new Datepair(dateTimeHopgiaobanEl);
+    $(document).ready(function () {
+        $.datetimepicker.setLocale('vi');
+        $('#datetimepicker').datetimepicker({
+            format: 'd/m/Y h:m',
+        });
+    });
+    $(document).ready(function () {
+        $.datetimepicker.setLocale('vi');
+        $('#datetimepicker2').datetimepicker({
+            format: 'd/m/Y h:m',
+        });
+    });
+    $(document).ready(function () {
+        $.datetimepicker.setLocale('vi');
+        $('#datetimepicker3').datetimepicker({
+            format: 'd/m/Y h:m',
+        });
+    });
 });

@@ -20,9 +20,11 @@
 <script src="<?php echo $template_path?>assets/plugins/datatables/datatables.min.js"></script>
 <script src="<?php echo $template_path?>assets/plugins/datatables/custom-datatable.js"></script>
 
-<script src="<?php echo $template_path?>assets/plugins/jquery-datetimepicker/bootstrap-datepicker.min.js"></script>
-<script src="<?php echo $template_path?>assets/plugins/jquery-datetimepicker/jquery.timepicker.min.js"></script>
-<script src="<?php echo $template_path?>assets/plugins/jquery-datetimepicker/datepair.js"></script>
+<!-- <script src="<?php echo $template_path?>assets/plugins/jquery-datetimepicker/jquery.datetimepicker.js"></script> -->
+<!-- <script src="<?php echo $template_path?>assets/plugins/jquery-datetimepicker/jquery.timepicker.min.js"></script> -->
+<!-- <script src="<?php echo $template_path?>assets/plugins/jquery-datetimepicker/datepair.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
 <script src="<?php echo $template_path?>assets/plugins/jquery-datetimepicker/custom-datetimepicker.js"></script>
 
 <!-- ChartJS -->

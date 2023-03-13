@@ -39,10 +39,11 @@
     .sidebarBody_select-wrapper .actions-btn,
     .sidebarBody_select-wrapper .bootstrap-select.show-tick .dropdown-menu li a span.text,
     .sidebarBody_select-wrapper .bootstrap-select .dropdown-toggle .filter-option-inner-inner,
-    .form-control {
+    .form-control,
+    .bs-actionsbox .actions-btn {
         font-size: var(--fz-10);
     }
-    .bs-actionsbox .actions-btn,
+
     .bootstrap-select .dropdown-toggle .filter-option-inner-inner,
     .dropdown-item,
     .style_table-3 th,
@@ -111,10 +112,11 @@
     .sidebarBody_select-wrapper .actions-btn,
     .sidebarBody_select-wrapper .bootstrap-select.show-tick .dropdown-menu li a span.text,
     .sidebarBody_select-wrapper .bootstrap-select .dropdown-toggle .filter-option-inner-inner,
-    .form-control {
+    .form-control,
+    .bs-actionsbox .actions-btn {
         font-size: var(--fz-10);
     }
-    .bs-actionsbox .actions-btn,
+
     .bootstrap-select .dropdown-toggle .filter-option-inner-inner,
     .dropdown-item,
     .style_table-3 th,
@@ -149,6 +151,10 @@
     }
     .sidebarBody_settings-body i {
         font-size: initial;
+    }
+
+    .bootstrap-select.show-tick .dropdown-menu li a span.text {
+        font-size: var(--fz-10);
     }
 
     .sidebarBody_settings-body {
@@ -188,7 +194,6 @@
     .sidebarBody_select-wrapper .bootstrap-select.show-tick .dropdown-menu li a span.text,
     .sidebarBody_select-wrapper .actions-btn,
     .bootstrap-select .dropdown-toggle .filter-option-inner-inner,
-    .bs-actionsbox .actions-btn,
     .bootstrap-select .dropdown-toggle .filter-option-inner-inner,
     .dropdown-item,
     .style_table-3 th,

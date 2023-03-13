@@ -10,7 +10,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?php echo $pageTitle; ?> - THAI HUNG CORP</title>
+    <title><?php echo $pageTitle ?> - THAI HUNG CORP</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo $template_path?>/assets/img/favicon.jpg">
@@ -28,10 +28,12 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css" />
 
     <!-- Plugins -->
-    <link rel="stylesheet"
-        href="<?php echo $template_path?>assets/plugins/jquery-datetimepicker/bootstrap-datepicker.min.css"
+    <!-- <link rel="stylesheet"
+        href="<?php //echo $template_path?>assets/plugins/jquery-datetimepicker/bootstrap-datepicker.min.css"
         rel="stylesheet" />
-    <link rel="stylesheet" href="<?php echo $template_path?>assets/plugins/jquery-datetimepicker/jquery.timepicker.css"
+    <link rel="stylesheet" href="<?php //echo $template_path?>assets/plugins/jquery-datetimepicker/jquery.timepicker.css"
+        rel="stylesheet" /> -->
+    <link rel="stylesheet" href="<?php echo $template_path?>assets/plugins/jquery-datetimepicker/jquery.datetimepicker.css"
         rel="stylesheet" />
 
     <!-- Base -->
@@ -67,7 +69,7 @@
                                 </a>
                                 <ul id="header_submenu">
                                     <li class="header_submenu-items">
-                                        <a href="" class="header_submenu-link" data-name="hop-giao-ban">Cơ cấu tổ
+                                        <a href="co-cau-to-chuc" class="header_submenu-link">Cơ cấu tổ
                                             chức</a>
                                     </li>
                                     <li class="header_submenu-items">
@@ -101,7 +103,7 @@
                                 <ul id="header_submenu">
                                     <li class="header_submenu-items">
                                         <a href="quan-ly-tuyen-dung" class="header_submenu-link"
-                                            data-name="hop-giao-ban">Tuyển dụng</a>
+                                           >Tuyển dụng</a>
                                     </li>
                                     <li class="header_submenu-items">
                                         <a href="#" class="header_submenu-link">Đánh giá nhân viên</a>
@@ -116,7 +118,7 @@
                                 </a>
                                 <ul id="header_submenu">
                                     <li class="header_submenu-items">
-                                        <a href="hop-giao-ban" class="header_submenu-link" data-name="hop-giao-ban">Giao
+                                        <a href="hop-giao-ban" class="header_submenu-link">Giao
                                             ban</a>
                                     </li>
                                     <li class="header_submenu-items">
@@ -137,7 +139,7 @@
                                 </a>
                                 <ul id="header_submenu">
                                     <li class="header_submenu-items">
-                                        <a href="ke-hoach" class="header_submenu-link" data-name="hop-giao-ban">Kế
+                                        <a href="ke-hoach" class="header_submenu-link">Kế
                                             hoạch</a>
                                     </li>
                                     <li class="header_submenu-items">
@@ -159,7 +161,7 @@
                                 <ul id="header_submenu">
                                     <li class="header_submenu-items">
                                         <a href="su-co-phat-sinh" class="header_submenu-link"
-                                            data-name="hop-giao-ban">Sự cố phát sinh</a>
+                                           >Sự cố phát sinh</a>
                                     </li>
                                     <li class="header_submenu-items">
                                         <a href="phan-anh" class="header_submenu-link">Phản ánh</a>
@@ -173,7 +175,7 @@
                                 </a>
                                 <ul id="header_submenu">
                                     <li class="header_submenu-items">
-                                        <a href="" class="header_submenu-link" data-name="hop-giao-ban">Sự việc và ý
+                                        <a href="" class="header_submenu-link">Sự việc và ý
                                             kiến</a>
                                     </li>
                                     <li class="header_submenu-items">
@@ -195,7 +197,7 @@
                                 </a>
                                 <ul id="header_submenu">
                                     <li class="header_submenu-items">
-                                        <a href="" class="header_submenu-link" data-name="hop-giao-ban">Sự việc và ý
+                                        <a href="" class="header_submenu-link">Sự việc và ý
                                             kiến</a>
                                     </li>
                                     <li class="header_submenu-items">

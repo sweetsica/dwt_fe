@@ -13,7 +13,7 @@
     --border-radius-mini: 4px;
     --box-shadow: 0 0 0 0.25rem rgb(253 13 13 / 11%);
 
-    --width-sidebar: 275px;
+    --width-sidebar: 265px;
 
     /* FontSize */
     --fz-10: 1rem;
@@ -91,6 +91,21 @@ option:hover {
 .dropdown-item.active,
 .dropdown-item:active {
     background-color: var(--primary-color);
+}
+
+/* DateTimePicker */
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today {
+    color: var(--primary-color);
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default,
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current {
+    background: var(--primary-color);
+    box-shadow: none;
+    color: #fff;
+    font-weight: 500;
 }
 
 /* STYLE SCROLLBAR */

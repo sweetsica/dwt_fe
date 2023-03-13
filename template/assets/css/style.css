@@ -8,7 +8,91 @@ label.col-form-label {
     /* font-weight: 500; */
 }
 
+/* (A) LIST TO MENU */
+.tree,
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.tree {
+}
+.tree li {
+    padding: 10px 6px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.tree li img {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+.tree li:last-child {
+    border: 0;
+}
+
+/* (B) SUB-SECTIONS */
+/* (B1) TOGGLE SHOW/HIDE */
+.section ul {
+    display: none;
+}
+.section input:checked ~ ul {
+    display: block;
+}
+
+/* (B2) HIDE CHECKBOX */
+.section input[type='checkbox'] {
+    display: none;
+}
+
+/* (B3) ADD EXPAND/COLLAPSE ICON  */
+.section {
+    position: relative;
+}
+
+.section label {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.section label:after {
+    content: '\0002B';
+    position: absolute;
+    top: 8px;
+    right: 0;
+    padding: 0px 6px;
+    text-align: center;
+    /* font-size: 1.4rem; */
+    color: #f00;
+    transition: all 0.5s;
+}
+.section input:checked ~ label:after {
+    color: #23c37a;
+    transform: rotate(45deg);
+}
+
+/* (B4) SUB-SECTION ITEMS */
+.section ul {
+    margin-top: 10px;
+    border-left: 1px solid;
+}
+.section ul li {
+    padding-left: 20px;
+}
+
 /*** Start Style Table ***/
+.style_disableAll td {
+    padding: 0 !important;
+}
 
 th {
     font-size: var(--fz-14);
@@ -63,10 +147,10 @@ td {
     width: 10%;
 }
 .style_table-3 tr th:nth-child(4) {
-    width: 20%;
+    width: 15%;
 }
 .style_table-3 tr th:nth-child(5) {
-    width: 20%;
+    width: 15%;
 }
 .style_table-3 tr th:nth-child(6) {
     width: 10%;
@@ -75,12 +159,29 @@ td {
     width: 10%;
 }
 .style_table-3 tr th:nth-child(8) {
+    width: 10%;
+}
+.style_table-3 tr th:nth-child(9) {
     width: 0%;
 }
 
 .style_table-3 td {
     padding: 6px 4px 6px 4px !important;
     /* line-height: 1.8rem; */
+}
+
+.info_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.info_content {
+    display: flex;
+    padding-right: 6px;
+}
+
+.info_label {
+    font-weight: 500;
 }
 
 .circle_tracking-wrapper {
@@ -343,7 +444,7 @@ table.dataTable thead > tr > td.sorting_asc_disabled:before {
 /*** START Style DateTimePicker ***/
 .datetimepicker_wrapper input {
     width: 100%;
-    margin-right: 6px;
+    /* margin-right: 6px; */
     border: none;
     background-color: var(--white-color-blur);
     border-radius: 4px;
@@ -657,6 +758,13 @@ th {
     position: relative;
 }
 
+.sidebarBody_heading-big {
+    font-size: var(--fz-14);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
 .sidebarHeader_card {
     padding: 10px 6px;
     background-color: var(--white-color-blur);
@@ -837,6 +945,8 @@ th {
 
 .sidebarBody_card-items-links {
     color: #949494;
+    font-size: 0.8rem;
+    text-decoration: underline;
 }
 
 .sidebarBody_card-posts {
