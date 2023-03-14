@@ -1,4 +1,4 @@
-@extends('template.header.master')
+@extends('template.master')
 {{-- Trang chủ GIao Ban --}}
 @section('title', 'Tổng kết tháng')
 @section('content')
@@ -807,7 +807,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy</button>
                     <button type="button" class="btn btn-danger">Gửi</button>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-@extends('template.header.master')
+@extends('template.master')
 {{-- Trang chủ GIao Ban --}}
 @section('title', 'Biên bản họp Giao Ban')
 @section('content')
@@ -77,12 +77,12 @@
                                                                     data-live-search="true" title="Chọn chủ trì..."
                                                                     data-select-all-text="Chọn tất cả"
                                                                     data-deselect-all-text="Bỏ chọn" data-size="3"
-                                                                    data-selected-text-format="count > 2"
+                                                                    data-selected-text-format="count > 1"
                                                                     data-count-selected-text="Có {0} Chủ trì"
                                                                     data-live-search-placeholder="Tìm kiếm...">
-                                                                    <option>Chủ trì 1</option>
-                                                                    <option>Chủ trì 2</option>
-                                                                    <option>Chủ trì 3</option>
+                                                                    <option>Nguyễn Ngọc Bảo</option>
+                                                                    <option>Đặng Nguyễn Lam Mai</option>
+                                                                    <option>Hồ Thị Hồng Vân</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -98,12 +98,12 @@
                                                                     data-live-search="true" title="Chọn thư ký..."
                                                                     data-select-all-text="Chọn tất cả"
                                                                     data-deselect-all-text="Bỏ chọn" data-size="3"
-                                                                    data-selected-text-format="count > 2"
+                                                                    data-selected-text-format="count > 1"
                                                                     data-count-selected-text="Có {0} Thư ký"
                                                                     data-live-search-placeholder="Tìm kiếm...">
-                                                                    <option>Thư ký 1</option>
-                                                                    <option>Thư ký 2</option>
-                                                                    <option>Thư ký 3</option>
+                                                                    <option>Nguyễn Ngọc Bảo</option>
+                                                                    <option>Đặng Nguyễn Lam Mai</option>
+                                                                    <option>Hồ Thị Hồng Vân</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -119,12 +119,15 @@
                                                                     data-live-search="true" title="Chọn thành viên..."
                                                                     data-select-all-text="Chọn tất cả"
                                                                     data-deselect-all-text="Bỏ chọn" data-size="3"
-                                                                    data-selected-text-format="count > 2"
+                                                                    data-selected-text-format="count > 1"
                                                                     data-count-selected-text="Có {0} thành viên"
                                                                     data-live-search-placeholder="Tìm kiếm...">
-                                                                    <option>Thành viên 1</option>
-                                                                    <option>Thành viên 2</option>
-                                                                    <option>Thành viên 3</option>
+                                                                    <option>Nguyễn Ngọc Bảo</option>
+                                                                    <option>Đặng Nguyễn Lam Mai</option>
+                                                                    <option>Hồ Thị Hồng Vân</option>
+                                                                    <option>Nguyễn Thị Ngọc Lan</option>
+                                                                    <option>Nguyễn Thị Hồng Oanh</option>
+                                                                    <option>Hà Nguyễn Minh Hiếu</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -147,7 +150,7 @@
                                             </div>
 
                                             <div class="table-responsive rounded">
-                                                <table class="table table-bordered border m-0 style_disableAll">
+                                                <table class="table table-responsive table-hover table-bordered m-0 style_disableAll">
                                                     <thead>
                                                         <tr>
                                                             <th>STT</th>
@@ -159,7 +162,11 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>01</td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    1
+                                                                </div>
+                                                            </td>
                                                             <td>
                                                                 <div style="cursor: pointer;" data-bs-toggle="modal"
                                                                     data-bs-target="#phanHoiVanDe">Chưa hoàn thành
@@ -168,7 +175,7 @@
                                                                     gửi thông</div>
                                                             </td>
                                                             <td>
-                                                                <div class="text-center">Mai</div>
+                                                                <div>Mai</div>
                                                             </td>
                                                             <td>31/03</td>
                                                             <td>
@@ -180,7 +187,11 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>02</td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    2
+                                                                </div>
+                                                            </td>
                                                             <td>
                                                                 <div style="cursor: pointer;" data-bs-toggle="modal"
                                                                     data-bs-target="#phanHoiVanDe">Chưa hoàn thành
@@ -189,7 +200,7 @@
                                                                     gửi thông</div>
                                                             </td>
                                                             <td>
-                                                                <div class="text-center">Mai</div>
+                                                                <div>Mai</div>
                                                             </td>
                                                             <td>31/03</td>
                                                             <td>
@@ -201,7 +212,11 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>03</td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    3
+                                                                </div>
+                                                            </td>
                                                             <td>
                                                                 <div style="cursor: pointer;" data-bs-toggle="modal"
                                                                     data-bs-target="#phanHoiVanDe">Chưa hoàn thành
@@ -210,7 +225,7 @@
                                                                     gửi thông</div>
                                                             </td>
                                                             <td>
-                                                                <div class="text-center">Mai</div>
+                                                                <div>Mai</div>
                                                             </td>
                                                             <td>31/03</td>
                                                             <td>
@@ -233,7 +248,7 @@
 
                             <div class="card mb-3">
                                 <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-center">
+                                    <div class="mb-2 d-flex justify-content-between align-items-center">
                                         <div class="card-title">Nội dung chính</div>
                                     </div>
                                     <div class='row'>
@@ -249,7 +264,6 @@
                                                             <th>Hướng giải quyết</th>
                                                             <th>PIC</th>
                                                             <th>Thời hạn</th>
-                                                            <th>Tình trạng</th>
                                                             <th colspan="2"></th>
                                                         </tr>
                                                     </thead>
@@ -265,31 +279,19 @@
                                                                 <div>Chưa hoàn thành báo cáo do abc chưa gửi thông</div>
                                                             </td>
                                                             <td>
-                                                                <div class="text-center">Mai</div>
+                                                                <div>Mai</div>
                                                             </td>
                                                             <td>
-                                                                <div contenteditable="true"
-                                                                    class="content_table-three-input">
-                                                                </div>
+                                                                NN1
                                                             </td>
                                                             <td>
-                                                                <div contenteditable="true"
-                                                                    class="content_table-three-input">
-                                                                </div>
+                                                                Sẽ gửi trong ngày	
                                                             </td>
                                                             <td>
-                                                                <select class="selectpicker" data-width="100%"
-                                                                    title="&nbsp;" selectedTextFormat="static">
-                                                                    <option style="display:none" value="">
-                                                                    </option>
-                                                                    <option>PCI 1</option>
-                                                                    <option>PCI 2</option>
-                                                                    <option>PCI 3</option>
-                                                                </select>
+                                                                Vân
                                                             </td>
                                                             <td>
-                                                                <input id="datetimepicker4" value="<?php echo date('d/m'); ?>"
-                                                                    class="form-control" type="text">
+                                                                05/04
                                                             </td>
                                                             <td>
                                                                 <div
@@ -314,30 +316,18 @@
                                                                 </div>
                                                                 <ul class="dropdown-menu"
                                                                     aria-labelledby="dropdownMenuButton1">
-                                                                    <li><a class="dropdown-item" href="#">Chưa giải
-                                                                            quyết</a>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#suaVanDeTonDong">
+                                                                            <img style="width:16px;height:16px" src="{{ asset('assets/img/edit.svg') }}" />
+                                                                            Sửa
+                                                                        </a>
                                                                     </li>
-                                                                    <li><a class="dropdown-item" href="#">Đã
-                                                                            giải quyết
-                                                                            đúng
-                                                                            hạn</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Không thể
-                                                                            giải
-                                                                            quyết</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Không xác
-                                                                            định
-                                                                            được
-                                                                            nguyên nhân</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Quá hạn
-                                                                            chưa
-                                                                            giải
-                                                                            quyết</a></li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#" data-repeater-delete>
+                                                                            <img style="width:16px;height:16px" src="{{ asset('assets/img/trash.svg') }}" /> Xóa
+                                                                        </a>
+                                                                    </li>
                                                                 </ul>
-                                                            </td>
-                                                            <td>
-                                                                <div data-repeater-delete class="close-row-btn">
-                                                                    <i class="bi bi-trash3"></i>
-                                                                </div>
                                                             </td>
                                                         </tr>
                                                         <tr data-repeater-item>
@@ -352,33 +342,21 @@
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <div class="text-center">Mai</div>
+                                                                <div>Mai</div>
                                                             </td>
                                                             <td>
-                                                                <div contenteditable="true"
-                                                                    class="content_table-three-input">
-                                                                </div>
+                                                                NN2
                                                             </td>
                                                             <td>
-                                                                <div contenteditable="true"
-                                                                    class="content_table-three-input">
-                                                                </div>
+                                                                Sẽ gửi trong tuần	
                                                             </td>
                                                             <td>
-                                                                <select class="selectpicker" data-width="100%"
-                                                                    title="&nbsp;" selectedTextFormat="static">
-                                                                    <option style="display:none" value="">
-                                                                    </option>
-                                                                    <option>PCI 1</option>
-                                                                    <option>PCI 2</option>
-                                                                    <option>PCI 3</option>
-                                                                </select>
+                                                                Vân
                                                             </td>
                                                             <td>
-                                                                <input id="datetimepicker5" value="<?php echo date('d/m'); ?>"
-                                                                    class="form-control" type="text">
+                                                                03/04
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 <div
                                                                     class="d-flex align-items-center justify-content-center">
                                                                     <div class="circle_tracking-wrapper">
@@ -400,30 +378,18 @@
                                                                 </div>
                                                                 <ul class="dropdown-menu"
                                                                     aria-labelledby="dropdownMenuButton1">
-                                                                    <li><a class="dropdown-item" href="#">Chưa giải
-                                                                            quyết</a>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#suaVanDeTonDong">
+                                                                            <img style="width:16px;height:16px" src="{{ asset('assets/img/edit.svg') }}" />
+                                                                            Sửa
+                                                                        </a>
                                                                     </li>
-                                                                    <li><a class="dropdown-item" href="#">Đã
-                                                                            giải quyết
-                                                                            đúng
-                                                                            hạn</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Không thể
-                                                                            giải
-                                                                            quyết</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Không xác
-                                                                            định
-                                                                            được
-                                                                            nguyên nhân</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Quá hạn
-                                                                            chưa
-                                                                            giải
-                                                                            quyết</a></li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#" data-repeater-delete>
+                                                                            <img style="width:16px;height:16px" src="{{ asset('assets/img/trash.svg') }}" /> Xóa
+                                                                        </a>
+                                                                    </li>
                                                                 </ul>
-                                                            </td>
-                                                            <td>
-                                                                <div data-repeater-delete class="close-row-btn">
-                                                                    <i class="bi bi-trash3"></i>
-                                                                </div>
                                                             </td>
                                                         </tr>
                                                         <tr data-repeater-item>
@@ -438,33 +404,21 @@
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <div class="text-center">Mai</div>
+                                                                <div>Mai</div>
                                                             </td>
                                                             <td>
-                                                                <div contenteditable="true"
-                                                                    class="content_table-three-input">
-                                                                </div>
+                                                                NN3
                                                             </td>
                                                             <td>
-                                                                <div contenteditable="true"
-                                                                    class="content_table-three-input">
-                                                                </div>
+                                                                Sẽ gửi trong tuần
                                                             </td>
                                                             <td>
-                                                                <select class="selectpicker" data-width="100%"
-                                                                    title="&nbsp;" selectedTextFormat="static">
-                                                                    <option style="display:none" value="">
-                                                                    </option>
-                                                                    <option>PCI 1</option>
-                                                                    <option>PCI 2</option>
-                                                                    <option>PCI 3</option>
-                                                                </select>
+                                                                Vân
                                                             </td>
                                                             <td>
-                                                                <input id="datetimepicker6" value="<?php echo date('d/m'); ?>"
-                                                                    class="form-control" type="text">
+                                                                02/04
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 <div
                                                                     class="d-flex align-items-center justify-content-center">
                                                                     <div class="circle_tracking-wrapper">
@@ -486,30 +440,18 @@
                                                                 </div>
                                                                 <ul class="dropdown-menu"
                                                                     aria-labelledby="dropdownMenuButton1">
-                                                                    <li><a class="dropdown-item" href="#">Chưa giải
-                                                                            quyết</a>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#suaVanDeTonDong">
+                                                                            <img style="width:16px;height:16px" src="{{ asset('assets/img/edit.svg') }}" />
+                                                                            Sửa
+                                                                        </a>
                                                                     </li>
-                                                                    <li><a class="dropdown-item" href="#">Đã
-                                                                            giải quyết
-                                                                            đúng
-                                                                            hạn</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Không thể
-                                                                            giải
-                                                                            quyết</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Không xác
-                                                                            định
-                                                                            được
-                                                                            nguyên nhân</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Quá hạn
-                                                                            chưa
-                                                                            giải
-                                                                            quyết</a></li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#" data-repeater-delete>
+                                                                            <img style="width:16px;height:16px" src="{{ asset('assets/img/trash.svg') }}" /> Xóa
+                                                                        </a>
+                                                                    </li>
                                                                 </ul>
-                                                            </td>
-                                                            <td>
-                                                                <div data-repeater-delete class="close-row-btn">
-                                                                    <i class="bi bi-trash3"></i>
-                                                                </div>
                                                             </td>
                                                         </tr>
                                                         <tr data-repeater-item>
@@ -524,33 +466,21 @@
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <div class="text-center">Mai</div>
+                                                                <div>Mai</div>
                                                             </td>
                                                             <td>
-                                                                <div contenteditable="true"
-                                                                    class="content_table-three-input">
-                                                                </div>
+                                                                NN4
                                                             </td>
                                                             <td>
-                                                                <div contenteditable="true"
-                                                                    class="content_table-three-input">
-                                                                </div>
+                                                                Sẽ gửi trong tuần
                                                             </td>
                                                             <td>
-                                                                <select class="selectpicker" data-width="100%"
-                                                                    title="&nbsp;" selectedTextFormat="static">
-                                                                    <option style="display:none" value="">
-                                                                    </option>
-                                                                    <option>PCI 1</option>
-                                                                    <option>PCI 2</option>
-                                                                    <option>PCI 3</option>
-                                                                </select>
+                                                                Vân
                                                             </td>
                                                             <td>
-                                                                <input id="datetimepicker7" value="<?php echo date('d/m'); ?>"
-                                                                    class="form-control" type="text">
+                                                                01/04
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 <div
                                                                     class="d-flex align-items-center justify-content-center">
                                                                     <div class="circle_tracking-wrapper">
@@ -572,30 +502,18 @@
                                                                 </div>
                                                                 <ul class="dropdown-menu"
                                                                     aria-labelledby="dropdownMenuButton1">
-                                                                    <li><a class="dropdown-item" href="#">Chưa giải
-                                                                            quyết</a>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#suaVanDeTonDong">
+                                                                            <img style="width:16px;height:16px" src="{{ asset('assets/img/edit.svg') }}" />
+                                                                            Sửa
+                                                                        </a>
                                                                     </li>
-                                                                    <li><a class="dropdown-item" href="#">Đã
-                                                                            giải quyết
-                                                                            đúng
-                                                                            hạn</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Không thể
-                                                                            giải
-                                                                            quyết</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Không xác
-                                                                            định
-                                                                            được
-                                                                            nguyên nhân</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Quá hạn
-                                                                            chưa
-                                                                            giải
-                                                                            quyết</a></li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#" data-repeater-delete>
+                                                                            <img style="width:16px;height:16px" src="{{ asset('assets/img/trash.svg') }}" /> Xóa
+                                                                        </a>
+                                                                    </li>
                                                                 </ul>
-                                                            </td>
-                                                            <td>
-                                                                <div data-repeater-delete class="close-row-btn">
-                                                                    <i class="bi bi-trash3"></i>
-                                                                </div>
                                                             </td>
                                                         </tr>
                                                         <tr data-repeater-item>
@@ -606,45 +524,24 @@
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <div contenteditable="true"
-                                                                    class="content_table-three-input">
-                                                                </div>
+                                                                Chưa hoàn thành báo cáo do abc chưa gửi thông
                                                             </td>
                                                             <td>
-                                                                <select class="selectpicker" data-width="100%"
-                                                                    title="&nbsp;" selectedTextFormat="static">
-                                                                    <option style="display:none" value="">
-                                                                    </option>
-                                                                    <option>Người nêu 1</option>
-                                                                    <option>Người nêu 2</option>
-                                                                    <option>Người nêu 3</option>
-                                                                </select>
+                                                                Mai
                                                             </td>
                                                             <td>
-                                                                <div contenteditable="true"
-                                                                    class="content_table-three-input">
-                                                                </div>
+                                                                NN5
                                                             </td>
                                                             <td>
-                                                                <div contenteditable="true"
-                                                                    class="content_table-three-input">
-                                                                </div>
+                                                                Sẽ gửi trong tuần
                                                             </td>
                                                             <td>
-                                                                <select class="selectpicker" data-width="100%"
-                                                                    title="&nbsp;" selectedTextFormat="static">
-                                                                    <option style="display:none" value="">
-                                                                    </option>
-                                                                    <option>PCI 1</option>
-                                                                    <option>PCI 2</option>
-                                                                    <option>PCI 3</option>
-                                                                </select>
+                                                                Vân
                                                             </td>
                                                             <td>
-                                                                <input id="datetimepicker8" value="<?php echo date('d/m'); ?>"
-                                                                    class="form-control" type="text">
+                                                                31/03
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 <div
                                                                     class="d-flex align-items-center justify-content-center">
                                                                     <div class="circle_tracking-wrapper">
@@ -666,30 +563,18 @@
                                                                 </div>
                                                                 <ul class="dropdown-menu"
                                                                     aria-labelledby="dropdownMenuButton1">
-                                                                    <li><a class="dropdown-item" href="#">Chưa giải
-                                                                            quyết</a>
+                                                                    <li>
+                                                                        <div class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#suaVanDeTonDong">
+                                                                            <img style="width:16px;height:16px" src="{{ asset('assets/img/edit.svg') }}" />
+                                                                            Sửa
+                                                                        </div>
                                                                     </li>
-                                                                    <li><a class="dropdown-item" href="#">Đã
-                                                                            giải quyết
-                                                                            đúng
-                                                                            hạn</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Không thể
-                                                                            giải
-                                                                            quyết</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Không xác
-                                                                            định
-                                                                            được
-                                                                            nguyên nhân</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Quá hạn
-                                                                            chưa
-                                                                            giải
-                                                                            quyết</a></li>
+                                                                    <li>
+                                                                        <div class="dropdown-item" href="#" data-repeater-delete>
+                                                                            <img style="width:16px;height:16px" src="{{ asset('assets/img/trash.svg') }}" /> Xóa
+                                                                        </div>
+                                                                    </li>
                                                                 </ul>
-                                                            </td>
-                                                            <td>
-                                                                <div data-repeater-delete class="close-row-btn">
-                                                                    <i class="bi bi-trash3"></i>
-                                                                </div>
                                                             </td>
                                                         </tr>
 
@@ -700,10 +585,10 @@
                                                 </div>
 
                                             </div>
-                                            <div class="action_table-wrapper text-end mt-3 mb-3">
+                                            <div class="action_table-wrapper text-end mt-4 mb-2">
                                                 <a href="kho-luu-tru-bien-ban-hop"
                                                     class="btn btn-outline-danger action_table-btn"
-                                                    style="margin-right:10px;">
+                                                    style="margin-right:6px;">
                                                     Đến kho lưu trữ
                                                 </a>
                                                 <a href='bien-ban-hop' class="btn btn-danger action_table-btn">
@@ -742,7 +627,7 @@
         </div>
     </div>
     @include('template.sidebar.sidebarHopGiaoBan.sidebarRight')
-    <!-- Modal -->
+    <!-- Modal Phản Hồi Vấn Đề -->
     <div class="modal fade" id="phanHoiVanDe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" style="max-width:700px;">
             <div class="modal-content">
@@ -784,11 +669,10 @@
                             <div class="w-100" style="flex:1">
                                 <select class="form-select" aria-label="Default select example">
                                     <option selected hidden>Chọn trạng thái</option>
-                                    <option>Chưa giải quyết</option>
-                                    <option>Đã giải quyết đúng hạn</option>
+                                    <option>Đã có hướng giải quyết</option>
+                                    <option>Đã giải quyết</option>
                                     <option>Không thể giải quyết</option>
                                     <option>Không xác định được nguyên nhân</option>
-                                    <option>Quá hạn chưa giải quyết</option>
                                 </select>
                             </div>
                         </div>
@@ -807,17 +691,110 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy</button>
                     <button type="button" class="btn btn-danger">Gửi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Sửa Vấn Đề -->
+    <div class="modal fade" id="suaVanDeTonDong" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width:38%;">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title w-100" id="exampleModalLabel">Chỉnh sửa vấn đề tồn đọng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="mb-3 d-flex align-items-center  justify-content-between">
+                                <div class="modal_body-title">Vấn đề tồn đọng <span class="text-danger">*</span></div>
+                                &nbsp;<input class="form-control"  style="width:76%" type="text" value="Chưa hoàn thành báo cáo do abc chưa gửi thông">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 d-flex align-items-center  justify-content-between">
+                                <div class="modal_body-title">Người nêu <span class="text-danger">*</span></div>
+                                <input class="form-control" style="width:51%" type="text" value="Nguyễn Ngọc Bảo">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 d-flex align-items-center  justify-content-between">
+                                <div class="modal_body-title">Chịu trách nhiệm <span class="text-danger">*</span></div>
+                                <input class="form-control" style="width:51%" type="text" value="Nguyễn Ngọc Bảo">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="mb-3 d-flex align-items-center  justify-content-between">
+                                <div class="modal_body-title">Nguyên nhân</div>
+                                <input class="form-control" style="width:76%" type="text" value="Chưa hoàn thành báo cáo do abc chưa gửi thông">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="mb-3 d-flex align-items-center  justify-content-between">
+                                <div class="modal_body-title">Hướng giải quyết</div>
+                                <input class="form-control" style="width:76%" type="text" value="Sẽ gửi trong tuần">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                                <div class="mb-3 d-flex align-items-center  justify-content-between">
+                                    <div class="modal_body-title">Thời hạn <span class="text-danger">*</span></div>
+                                    <input id="timeSuaVanDe" value="<?php echo date('d/m/Y'); ?>" class="form-control" style="width:51%" type="text">
+                                </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center  justify-content-between">
+                                <div class="modal_body-title">Tình trạng <span class="text-danger">*</span></div>
+                                <select class="form-select w-75" aria-label="Default select example">
+                                    <option selected hidden>Chọn trạng thái</option>
+                                    <option>Đã có hướng giải quyết</option>
+                                    <option>Đã giải quyết</option>
+                                    <option>Không thể giải quyết</option>
+                                    <option>Không xác định được nguyên nhân</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Xóa thuộc tính --}}
+    <div class="modal fade" id="xoaThuocTinh" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger" id="exampleModalLabel">Xóa Thuộc tính này</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có thực sự muốn xoá thuộc tính đã chọn không?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger" id="deleteRowElement">Có, tôi muốn xóa</button>
                 </div>
             </div>
         </div>
     </div>
 @endsection
 @section('footer-script')
+<!-- ChartJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-stacked100@1.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js">
     </script>
     <script src="{{ asset('assets/plugins/jquery-datetimepicker/custom-datetimepicker.js') }}"></script>
+
+    <script src="{{ asset('/assets/js/chart_hopgiaoban/doughnutChiSo.js') }}"></script>
 @endsection

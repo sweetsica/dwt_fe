@@ -62,6 +62,12 @@ button {
     border: none;
 }
 
+.btn {
+    font-size: var(--fz-12);
+    height: 28px;
+}
+
+
 input.disableText {
     background-color: var(--white-color-blur);
     border-radius: var(--border-radius-mini);

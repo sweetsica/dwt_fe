@@ -42,43 +42,36 @@ $(function () {
     });
     $(document).ready(function () {
         $.datetimepicker.setLocale('vi');
-        $('#datetimepicker3').datetimepicker({
+        $('#vanDeTonDong').datetimepicker({
             format: 'd/m/Y',
             timepicker: false,
         });
     });
     $(document).ready(function () {
         $.datetimepicker.setLocale('vi');
-        $('#datetimepicker4').datetimepicker({
-            format: 'd/m',
+        $('#timeSuaVanDe').datetimepicker({
+            format: 'd/m/Y',
             timepicker: false,
         });
     });
     $(document).ready(function () {
         $.datetimepicker.setLocale('vi');
-        $('#datetimepicker5').datetimepicker({
-            format: 'd/m',
+        $('#createUser').datetimepicker({
+            format: 'd/m/Y',
             timepicker: false,
         });
     });
     $(document).ready(function () {
         $.datetimepicker.setLocale('vi');
-        $('#datetimepicker6').datetimepicker({
-            format: 'd/m',
+        $('#ngayThuViec').datetimepicker({
+            format: 'd/m/Y',
             timepicker: false,
         });
     });
     $(document).ready(function () {
         $.datetimepicker.setLocale('vi');
-        $('#datetimepicker7').datetimepicker({
-            format: 'd/m',
-            timepicker: false,
-        });
-    });
-    $(document).ready(function () {
-        $.datetimepicker.setLocale('vi');
-        $('#datetimepicker8').datetimepicker({
-            format: 'd/m',
+        $('#ngayChinhThuc').datetimepicker({
+            format: 'd/m/Y',
             timepicker: false,
         });
     });

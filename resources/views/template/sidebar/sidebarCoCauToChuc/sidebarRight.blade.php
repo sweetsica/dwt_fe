@@ -185,6 +185,69 @@
                         </div>
                     </div>
                 </div>
+                {{-- <div class="sidebarBody_wrapper mt-4">
+                    <div class="sidebarBody_card bg-blue-blur">
+                        <div class="sidebarBody_heading-wrapper">
+                            <h6 class="sidebarBody_heading mt-2 mb-2">
+                                Thông báo
+                            </h6>
+                        </div>
+                        <div class="sidebarBody_card-items-pdf">
+                            <div class="sidebarBody_card-items-wrapper mb-2 mt-2 d-flex align-items-start justify-content-between">
+                                <div class="sidebarBody_card-items-left">
+                                    <div class="sidebarBody_notification-title">
+                                        <span
+                                            >Thanh toán cho agency thang máy Chicilon</span
+                                        >
+                                    </div>
+                                    <div class="sidebarBody_notification-status">
+                                        <div class="sidebarBody_card-text text-success">
+                                            Hoàn thành
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebarBody_card-items-right">
+                                    <div class="sidebarBody_notification-date" href="">14/02/2023</div>
+                                </div>
+                            </div>
+                            <div class="sidebarBody_card-items-wrapper mb-2 d-flex align-items-start justify-content-between">
+                                <div class="sidebarBody_card-items-left">
+                                    <div class="sidebarBody_notification-title">
+                                        <span
+                                            >Thanh toán cho agency thang máy Chicilon</span
+                                        >
+                                    </div>
+                                    <div class="sidebarBody_notification-status">
+                                        <div class="sidebarBody_card-text text-danger">
+                                            Không thể giải quyết
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebarBody_card-items-right">
+                                    <div class="sidebarBody_notification-date" href="">14/02/2023</div>
+                                </div>
+                            </div>
+                            <div class="sidebarBody_card-items-wrapper d-flex align-items-start justify-content-between">
+                                <div class="sidebarBody_card-items-left">
+                                    <div class="sidebarBody_notification-title">
+                                        <span
+                                            >Thanh toán cho agency thang máy Chicilon</span
+                                        >
+                                    </div>
+                                    <div class="sidebarBody_notification-status">
+                                        <div class="sidebarBody_card-text text-danger">
+                                            Không xác định được nguyên nhân
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebarBody_card-items-right">
+                                    <div class="sidebarBody_notification-date" href="">14/02/2023</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> --}}
                 <div class="sidebarBody_wrapper mt-4">
                     <div class="sidebarBody_card bg-blue-blur">
                         <div class="sidebarBody_heading-wrapper">
@@ -361,7 +424,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy</button>
                 <button type="button" class="btn btn-danger">Gửi</button>
             </div>
         </div>

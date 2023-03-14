@@ -1,4 +1,4 @@
-@extends('template.header.master')
+@extends('template.master')
 {{-- Trang chủ GIao Ban --}}
 @section('title', 'Biên bản họp')
 @section('content')

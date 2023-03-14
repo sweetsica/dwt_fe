@@ -1,9 +1,9 @@
-@extends('template.header.master')
+@extends('template.master')
 {{-- Trang chủ GIao Ban --}}
 @section('title', 'Hồ sơ đơn vị')
 @section('content')
     @include('template.sidebar.sidebarCoCauToChuc.sidebarLeft')
-    <div id="mainWrap" class="mainWrap">
+    <div id="mainWrap" class="mainWrap me-0">
         <div class="mainSection">
             <div class="main">
                 <div class="container-fluid">
@@ -11,34 +11,23 @@
                         <h5 class="mainSection_heading-title">
                             Hồ sơ đơn vị
                         </h5>
-                        {{-- <div class="mainSection_card">
-                            <div class="mainSection_content">
-                                <div class="me-5" style="flex:1">Đơn vị: </div>
-                                <div class="d-flex justify-content-start" style="flex:2"><strong>Kế toán</strong></div>
-                            </div>
-                            <div class="mainSection_content">
-                                <div class="me-3">Trưởng đơn vị: </div>
-                                <div class="d-flex justify-content-start"><strong>Nguyễn Thị Yến Hoa</strong></div>
-                            </div>
-                        </div>
-                        <div id="thismonth" class="mainSection_thismonth">03/2023</div> --}}
                     </div>
 
                     <div class='row'>
                         <div class="col-md-12">
                             <div class="card mb-3">
                                 <div class="card-body position-relative">
-                                    <div class="pb-2 d-flex">
-                                        <div class="card-title">Digital Marketing</div>
-                                        <div class="btn" data-bs-toggle="modal" data-bs-target="#suaDonViPhongBan">
-                                            <img style="width:16px;height:16px" src="{{ asset('assets/img/edit.svg') }}" />
-                                        </div>
-                                        <div class="btn" data-bs-toggle="modal" data-bs-target="#xoaCoCauToChuc">
-                                            <img style="width:16px;height:16px" src="{{ asset('assets/img/trash.svg') }}" />
-                                        </div>
-                                    </div>
-                                    <div class="text_wrapper d-flex align-items-center justify-content-between">
+                                    <div class="text_wrapper mb-3">
                                         <div class="text_content">
+                                            <div class="pb-2 d-flex align-items-center">
+                                                <div class="card-title">Digital Marketing</div>
+                                                <div class="btn" data-bs-toggle="modal" data-bs-target="#suaDonViPhongBan">
+                                                    <img style="width:16px;height:16px" src="{{ asset('assets/img/edit.svg') }}" />
+                                                </div>
+                                                <div class="btn" data-bs-toggle="modal" data-bs-target="#xoaCoCauToChuc">
+                                                    <img style="width:16px;height:16px" src="{{ asset('assets/img/trash.svg') }}" />
+                                                </div>
+                                            </div>
                                             <div class="info_wrapper">
                                                 <div class="info_content">
                                                     <div class="info_label">Đơn vị cha:&nbsp;</div>
@@ -72,18 +61,55 @@
                                         </div>
 
                                         <div class="text_action">
-                                            <div class="main_search d-flex">
+                                            <div class="text_action-wrapper">
+                                                <div class="text_action-content">
+                                                    <div class="text_action-label">
+                                                        Thông tin nhân sự
+                                                        <span class="text_action-mini">(Hiện có/Tổng định mức)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="text_action-title-wrapper">
+                                                    <div class="text_action-items">
+                                                        <strong>Trưởng bộ phận: </strong>
+                                                        <span>1/1</span>
+                                                    </div>
+                                                    <div class="text_action-items">
+                                                        <strong>Chuyên viên: </strong>
+                                                        <span>1/2</span>
+                                                    </div>
+                                                    <div class="text_action-items">
+                                                        <strong>Nhân viên: </strong>
+                                                        <span>5/15</span>
+                                                    </div>
+                                                    <div class="text_action-items">
+                                                        <strong>Chính thức:  </strong>
+                                                        <span>4/7</span>
+                                                    </div>
+                                                    <div class="text_action-items">
+                                                        <strong>Thử việc: </strong>
+                                                        <span>2/7</span>
+                                                    </div>
+                                                    <div class="text_action-items">
+                                                        <strong>Cộng tác viên: </strong>
+                                                        <span>1/7</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="main_search d-flex mt-2">
                                                 <i class="bi bi-search"></i>
-                                                <input type="text" class="form-control" placeholder="Tìm kiếm nhiệm vụ">
-                                                <button class="btn btn-danger" data-bs-toggle="modal"
-                                                    data-bs-target="#themThanhVien" style="padding: 0 10px">Thêm thành viên</button>
+                                                <input type="text" class="form-control" placeholder="Tìm kiếm...">
+                                                <button class="btn btn-danger d-block w-50" data-bs-toggle="modal"
+                                                    data-bs-target="#themThanhVien">Thêm thành
+                                                    viên</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class='row'>
                                         <div class="col-md-12">
                                             <div class="table-responsive dataTables_wrapper">
-                                                <table id="coCauToChuc" class="table table-bordered">
+                                                <table id="coCauToChuc"
+                                                    class="table table-responsive table-hover table-bordered">
                                                     <thead>
                                                         <tr class="bg-light">
                                                             <th>STT</th>
@@ -99,34 +125,35 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <th scope="row">1</th>
+                                                            <th scope="row"><div class="d-flex justify-content-center align-items-center">1</div></th>
                                                             <td>
                                                                 Digital Marketing
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 Trưởng Bộ phận
                                                             </td>
                                                             <td>
                                                                 Quản lý các hoạt động của phòng
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 25.000.000
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 325.000.000
                                                             </td>
                                                             <td>
-                                                                <div  data-bs-toggle="modal" data-bs-target="#trangBiHanhChinh">
+                                                                <div data-bs-toggle="modal"
+                                                                    data-bs-target="#trangBiHanhChinh">
                                                                     Pack Quản lý
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 Vũ Thị Hà
                                                             </td>
-                                                            <td class="text-center">
-                                                                <div class="table_actions">
+                                                            <td>
+                                                                <div class="table_actions d-flex">
                                                                     <div class="btn" data-bs-toggle="modal"
-                                                                    data-bs-target="#suaThanhVien">
+                                                                        data-bs-target="#suaThanhVien">
                                                                         <img style="width:16px;height:16px"
                                                                             src="{{ asset('assets/img/edit.svg') }}" />
                                                                     </div>
@@ -139,34 +166,35 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <th scope="row">2</th>
+                                                            <th scope="row"><div class="d-flex justify-content-center align-items-center">2</div></th>
                                                             <td>
                                                                 Content website
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 Nhân viên
                                                             </td>
                                                             <td>
                                                                 Viết thương hiệu sản phẩm & sự kiện nội bộ trên website
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 10.000.000
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 130.000.000
                                                             </td>
                                                             <td>
-                                                                <div  data-bs-toggle="modal" data-bs-target="#trangBiHanhChinh">
+                                                                <div data-bs-toggle="modal"
+                                                                    data-bs-target="#trangBiHanhChinh">
                                                                     Pack Quản lý
                                                                 </div>
                                                             </td>
                                                             <td style="letter-spacing: -1px">
                                                                 Nguyễn Thị Ngọc Lan
                                                             </td>
-                                                            <td class="text-center">
-                                                                <div class="table_actions">
+                                                            <td>
+                                                                <div class="table_actions d-flex">
                                                                     <div class="btn" data-bs-toggle="modal"
-                                                                    data-bs-target="#suaThanhVien">
+                                                                        data-bs-target="#suaThanhVien">
                                                                         <img style="width:16px;height:16px"
                                                                             src="{{ asset('assets/img/edit.svg') }}" />
                                                                     </div>
@@ -179,34 +207,35 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <th scope="row">3</th>
+                                                            <th scope="row"><div class="d-flex justify-content-center align-items-center">3</div></th>
                                                             <td>
                                                                 Sale Online
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 Nhân viên
                                                             </td>
                                                             <td>
                                                                 Giới thiệu sản phẩm đến khách hàng, chăm sóc khách hàng
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 10.000.000
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 130.000.000
                                                             </td>
                                                             <td>
-                                                                <div  data-bs-toggle="modal" data-bs-target="#trangBiHanhChinh">
+                                                                <div data-bs-toggle="modal"
+                                                                    data-bs-target="#trangBiHanhChinh">
                                                                     Pack Quản lý
                                                                 </div>
                                                             </td>
                                                             <td style="letter-spacing: -1px">
                                                                 Nguyễn Thị Hồng Oanh
                                                             </td>
-                                                            <td class="text-center">
-                                                                <div class="table_actions">
+                                                            <td>
+                                                                <div class="table_actions d-flex">
                                                                     <div class="btn" data-bs-toggle="modal"
-                                                                    data-bs-target="#suaThanhVien">
+                                                                        data-bs-target="#suaThanhVien">
                                                                         <img style="width:16px;height:16px"
                                                                             src="{{ asset('assets/img/edit.svg') }}" />
                                                                     </div>
@@ -219,34 +248,35 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <th scope="row">4</th>
+                                                            <th scope="row"><div class="d-flex justify-content-center align-items-center">4</div></th>
                                                             <td>
                                                                 Sale Online
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 Nhân viên
                                                             </td>
                                                             <td>
                                                                 Giới thiệu sản phẩm đến khách hàng, chăm sóc khách hàng
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 10.000.000
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 130.000.000
                                                             </td>
                                                             <td>
-                                                                <div  data-bs-toggle="modal" data-bs-target="#trangBiHanhChinh">
+                                                                <div data-bs-toggle="modal"
+                                                                    data-bs-target="#trangBiHanhChinh">
                                                                     Pack Quản lý
                                                                 </div>
                                                             </td>
                                                             <td style="letter-spacing: -1px">
                                                                 Nguyễn Thị Hồng Oanh
                                                             </td>
-                                                            <td class="text-center">
-                                                                <div class="table_actions">
+                                                            <td>
+                                                                <div class="table_actions d-flex">
                                                                     <div class="btn" data-bs-toggle="modal"
-                                                                    data-bs-target="#suaThanhVien">
+                                                                        data-bs-target="#suaThanhVien">
                                                                         <img style="width:16px;height:16px"
                                                                             src="{{ asset('assets/img/edit.svg') }}" />
                                                                     </div>
@@ -259,34 +289,35 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <th scope="row">5</th>
+                                                            <th scope="row"><div class="d-flex justify-content-center align-items-center">5</div></th>
                                                             <td>
                                                                 Quản lý sàn TMDT
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 Chuyên viên
                                                             </td>
                                                             <td>
                                                                 Lên kế hoạch về chiển dịch Marketing trên sàn TMĐT
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 14.000.000
                                                             </td>
-                                                            <td class="text-center">
+                                                            <td>
                                                                 182.000.000
                                                             </td>
                                                             <td>
-                                                                <div  data-bs-toggle="modal" data-bs-target="#trangBiHanhChinh">
+                                                                <div data-bs-toggle="modal"
+                                                                    data-bs-target="#trangBiHanhChinh">
                                                                     Pack Nhân viên
                                                                 </div>
                                                             </td>
                                                             <td style="letter-spacing: -1px">
                                                                 Hà Nguyễn Minh Hiếu
                                                             </td>
-                                                            <td class="text-center">
-                                                                <div class="table_actions">
+                                                            <td>
+                                                                <div class="table_actions d-flex">
                                                                     <div class="btn" data-bs-toggle="modal"
-                                                                    data-bs-target="#suaThanhVien">
+                                                                        data-bs-target="#suaThanhVien">
                                                                         <img style="width:16px;height:16px"
                                                                             src="{{ asset('assets/img/edit.svg') }}" />
                                                                     </div>
@@ -317,7 +348,6 @@
             </div>
         </div>
     </div>
-    @include('template.sidebar.sidebarCoCauToChuc.sidebarRight')
 
     {{-- Xóa Cơ cấu tổ chức --}}
     <div class="modal fade" id="xoaCoCauToChuc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -331,7 +361,7 @@
                     Bạn có thực sự muốn xoá cơ cấu tổ chức đã chọn không?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy</button>
                     <button type="button" class="btn btn-danger">Có, xóa dữ liệu</button>
                 </div>
             </div>
@@ -349,7 +379,7 @@
                     Bạn có thực sự muốn xoá thành viên Vũ Thị Hà không?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy</button>
                     <button type="button" class="btn btn-danger">Có, xóa dữ liệu</button>
                 </div>
             </div>
@@ -370,7 +400,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex col-sm-4">
-                                    Tên đơn vị<span class="text-danger">*</span>
+                                    <div class="modal_body-title">Tên đơn vị<span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" value="Digital Marketing">
@@ -380,7 +410,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="d-flex col-sm-4">
-                                    Mã đơn vị<span class="text-danger">*</span>
+                                    <div class="modal_body-title">Mã đơn vị<span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" value="DMKT">
@@ -390,7 +420,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="d-flex col-sm-4">
-                                    Thuộc đơn vị<span class="text-danger">*</span>
+                                    <div class="modal_body-title">Thuộc đơn vị<span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" value="CTCP Mastertran">
@@ -401,7 +431,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex col-sm-4">
-                                    Cấp tổ chức<span class="text-danger">*</span>
+                                    <div class="modal_body-title">Cấp tổ chức<span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" value="Tổ/Đội/Nhóm">
@@ -411,7 +441,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="d-flex col-sm-4">
-                                    Trưởng đơn vị <span class="text-danger">*</span>
+                                    <div class="modal_body-title">Trưởng đơn vị <span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" value="Vũ Thị Hà - MTT123">
@@ -421,7 +451,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="d-flex col-sm-4">
-                                    Trụ sở chính<span class="text-danger">*</span>
+                                    <div class="modal_body-title">Trụ sở chính<span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" value="219 Trung Kính, Yên Hoà, Cầu...">
@@ -431,18 +461,18 @@
                         <div class="col-sm-12">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="d-flex col-sm-2">
-                                    Chức năng, nhiệm vụ*<span class="text-danger">*</span>
+                                    <div class="modal_body-title">Chức năng <br> nhiệm vụ*<span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-10">
                                     <textarea class="form-control" type="text">Xây dựng chiến lược truyền thông và chiến lược Marketing để tiếp cận với nhóm khách hàng trên các nền tảng kỹ thuật số.</textarea>
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy</button>
                     <button type="button" class="btn btn-danger">Lưu</button>
                 </div>
             </div>
@@ -476,7 +506,7 @@
                             <div class="col-sm-5">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-3">
-                                        Họ và đệm <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Họ và đệm <span class="text-danger">*</span></div>
                                     </div>
                                     <div class="col-sm-9">
                                         <input class="form-control" type="text" value="Vũ Thị">
@@ -484,7 +514,7 @@
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex col-sm-3">
-                                        Giới tính <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Giới tính <span class="text-danger">*</span></div>
                                     </div>
                                     <div class="col-sm-9">
                                         <div class="form-check form-check-inline">
@@ -492,8 +522,8 @@
                                                 id="inlineRadio1" value="option1">
                                             <label class="form-check-label" for="inlineRadio1">Nam</label>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" checked type="radio" name="inlineRadioOptions"
-                                                    id="inlineRadio2" value="option2">
+                                                <input class="form-check-input" checked type="radio"
+                                                    name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                                 <label class="form-check-label" for="inlineRadio2">Nữ</label>
                                             </div>
                                         </div>
@@ -503,7 +533,7 @@
                             <div class="col-sm-5">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-3">
-                                        Tên<span class="text-danger">*</span>
+                                        <div class="modal_body-title">Tên<span class="text-danger">*</span></div>
                                     </div>
                                     <div class="col-sm-9">
                                         <input class="form-control" type="text" value="Hà">
@@ -511,7 +541,7 @@
                                 </div>
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-3">
-                                        Ngày sinh<span class="text-danger">*</span>
+                                        <div class="modal_body-title"> Ngày sinh<span class="text-danger">*</span></div>
                                     </div>
                                     <div class="col-sm-9">
                                         <input class="form-control" type="text" value="07/03/1994">
@@ -526,7 +556,8 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-4">
-                                        Email liên hệ <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Email liên hệ <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <input class="form-control" type="text" value="vuha@gmail.com">
@@ -536,7 +567,8 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex col-sm-4">
-                                        Số điện thoại liên hệ <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Số điện thoại liên hệ <span
+                                                class="text-danger">*</span></div>
                                     </div>
                                     <div class=" col-sm-8">
                                         <input class="form-control" type="text" value="0123456789">
@@ -546,7 +578,8 @@
                             <div class="col-sm-12">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-2">
-                                        Địa chỉ liên hệ <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Địa chỉ liên hệ <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text" value="219 trung kính">
@@ -561,7 +594,8 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-4">
-                                        Mã nhân viên <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Mã nhân viên <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <input class="form-control" type="text" value="MTT123">
@@ -572,7 +606,8 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex col-sm-4">
-                                        Email công ty <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Email công ty <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <input class="form-control" type="text" value="digital@doppelherz.vn">
@@ -582,7 +617,8 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-4">
-                                        Đơn vị công tác <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Đơn vị công tác <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <input class="form-control" type="text" value="CTCP Mastertran">
@@ -592,7 +628,7 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex col-sm-4">
-                                        Phòng ban <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Phòng ban <span class="text-danger">*</span></div>
                                     </div>
                                     <div class="col-sm-8">
                                         <select class="form-select">
@@ -610,11 +646,11 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-4">
-                                        Vị trí công việc <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Vị trí công việc <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
-                                        <select class="form-select"
-                                            aria-label="Default select example">
+                                        <select class="form-select" aria-label="Default select example">
                                             <option selected>Quản lý phòng</option>
                                             <option>Quản lý sàn TMĐT</option>
                                             <option>Content Website</option>
@@ -629,7 +665,7 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex col-sm-4">
-                                        Chức danh <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Chức danh <span class="text-danger">*</span></div>
                                     </div>
                                     <div class="col-sm-8">
                                         <input class="form-control" type="text" value="Trưởng Bộ phận">
@@ -639,7 +675,8 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-4">
-                                        Quản lý trực tiếp <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Quản lý trực tiếp <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <input class="form-control" type="text" value="Bùi Thị Minh Hoa - GĐĐH">
@@ -649,7 +686,7 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex col-sm-4">
-                                        Hình thức <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Hình thức <span class="text-danger">*</span></div>
                                     </div>
                                     <div class="col-sm-8">
                                         <input class="form-control" type="text" value="Toàn thời gian">
@@ -659,7 +696,8 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-4">
-                                        Ngày thử việc <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Ngày thử việc <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <input class="form-control" type="text" value="01/01/2022">
@@ -669,7 +707,8 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex col-sm-4">
-                                        Ngày chính thức <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Ngày chính thức <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <input class="form-control" type="text" value="01/03/2022">
@@ -679,7 +718,8 @@
                             <div class="col-sm-6 mb-3">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex col-sm-4">
-                                        Trạng thái làm việc <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Trạng thái làm việc <span
+                                                class="text-danger">*</span></div>
                                     </div>
                                     <div class="col-sm-8">
                                         <input class="form-control" type="text" value="Đang làm việc">
@@ -690,7 +730,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy</button>
                     <button type="button" class="btn btn-danger">Lưu</button>
                 </div>
             </div>
@@ -700,7 +740,7 @@
     {{-- Modal Them thanh vien --}}
     <div class="modal fade" id="themThanhVien" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
         style="z-index:1999">
-        <div class="modal-dialog modal-dialog-centered" style="max-width: 38%">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 44%">
             <div class="modal-content">
                 <div class="modal-header text-center">
                     <h5 class="modal-title w-100" id="exampleModalLabel">Thêm thành viên</h5>
@@ -722,19 +762,39 @@
                                 </div>
                             </div>
                             <div class="col-sm-5">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="d-flex col-sm-3">
-                                        Họ và đệm <span class="text-danger">*</span>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="d-flex col-sm-4">
+                                        <div class="modal_body-title">Họ và tên <span class="text-danger">*</span></div>
                                     </div>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="text" placeholder="Nhập họ và đệm">
+                                    <div class="col-sm-8">
+                                        <input class="form-control" type="text" placeholder="Nhập họ và tên">
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="d-flex col-sm-4">
+                                        <div class="modal_body-title">Ngày sinh<span class="text-danger">*</span></div >
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input id="createUser" value="<?php echo date('d/m/Y'); ?>" class="form-control" type="text">
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <div class="d-flex col-sm-3">
-                                        Giới tính <span class="text-danger">*</span>
+                                    <div class="d-flex col-sm-4">
+                                        <div class="modal_body-title">Số điện thoại <span
+                                                class="text-danger">*</span></div>
                                     </div>
-                                    <div class="col-sm-9">
+                                    <div class=" col-sm-8">
+                                        <input class="form-control" type="text" placeholder="Nhập số điện thoại">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="d-flex col-sm-4">
+                                        <div class="modal_body-title">Giới tính <span class="text-danger">*</span></div>
+                                    </div>
+                                    <div class="col-sm-8">
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                 id="inlineRadio1" value="option1">
@@ -747,69 +807,37 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-5">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="d-flex col-sm-3">
-                                        Tên<span class="text-danger">*</span>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="text" placeholder="Nhập email">
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="d-flex col-sm-3">
-                                        Ngày sinh<span class="text-danger">*</span>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="text" placeholder="Nhập email">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="create_user-wrapper">
-                        <div class="create_user-title mb-2">Thông tin liên hệ</div>
-                        <div class="row">
-                            <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-4">
-                                        Email liên hệ <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Email liên hệ <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
-                                        <input class="form-control" type="text" placeholder="Nhập email">
+                                        <input class="form-control" type="text" placeholder="Nhập email liên hệ">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex col-sm-4">
-                                        Số điện thoại liên hệ <span class="text-danger">*</span>
-                                    </div>
-                                    <div class=" col-sm-8">
-                                        <input class="form-control" type="text" placeholder="Nhập số điện thoại">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
                                 <div class="d-flex align-items-center mb-3">
-                                    <div class="d-flex col-sm-2">
-                                        Địa chỉ liên hệ <span class="text-danger">*</span>
+                                    <div class="d-flex col-sm-4">
+                                        <div class="modal_body-title">Địa chỉ liên hệ <span class="text-danger">*</span>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-10">
+                                    <div class="col-sm-8">
                                         <input class="form-control" type="text" placeholder="Nhập địa chỉ liên hệ">
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
+                    
                     <div class="create_user-wrapper">
                         <div class="create_user-title mb-2">Thông tin công việc</div>
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-4">
-                                        Mã nhân viên <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Mã nhân viên <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <input class="form-control" type="text" placeholder="Nhập Mã nhân viên">
@@ -820,7 +848,8 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex col-sm-4">
-                                        Email công ty <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Email công ty <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <input class="form-control" type="text" placeholder="Nhập email công ty">
@@ -830,21 +859,25 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-4">
-                                        Đơn vị công tác <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Đơn vị công tác <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
-                                        <input class="form-control" type="text" placeholder="Nhập Mã nhân viên">
+                                        <select class="selectpicker" title="Chọn đơn vị">
+                                            <option>Doppelherz</option>
+                                            <option>CTCP Mastertran</option>
+                                            <option>CTCP Thái Bình Hưng Thịnh</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex col-sm-4">
-                                        Phòng ban <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Phòng ban <span class="text-danger">*</span></div>
                                     </div>
                                     <div class="col-sm-8">
-                                        <select id="onchangePhongBan" class="form-select">
-                                            <option selected hidden>Chọn phòng/ban</option>
+                                        <select id="onchangePhongBan" class="selectpicker" title="Chọn phòng/ban">
                                             <option>Trade Marketing</option>
                                             <option>Digital Marketing</option>
                                             <option>Quản trị Nhãn & Đào tạo</option>
@@ -859,12 +892,11 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-4">
-                                        Vị trí công việc <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Vị trí công việc <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
-                                        <select id="onchangeViTriCongViec" class="form-select"
-                                            aria-label="Default select example">
-                                            <option selected hidden>Chọn vị trí công việc</option>
+                                        <select id="onchangeViTriCongViec" class="selectpicker" title="Chọn vị trí công việc">
                                             <option>Quản lý phòng</option>
                                             <option>Quản lý sàn TMĐT</option>
                                             <option>Content Website</option>
@@ -879,79 +911,121 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex col-sm-4">
-                                        Chức danh <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Chức danh <span class="text-danger">*</span></div>
                                     </div>
                                     <div class="col-sm-8">
-                                        <input class="form-control" type="text" placeholder="Nhập email công ty">
+                                        <select class="selectpicker" title="Chọn chức danh">
+                                            <option>Chủ tịch HĐQT</option>
+                                            <option>Tổng Giám đốc</option>
+                                            <option>Phó Tổng Giám đốc</option>
+                                            <option>Giám đốc điều hành</option>
+                                            <option>Quản lý cấp cao</option>
+                                            <option>Quản lý cấp trung</option>
+                                            <option>Trưởng phòng</option>
+                                            <option>Phó phòng</option>
+                                            <option>Trưởng nhóm</option>
+                                            <option>Chuyên viên</option>
+                                            <option>Nhân viên</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-4">
-                                        Quản lý trực tiếp <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Định biên <span class="text-danger">*</span> 
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
-                                        <input class="form-control" type="text" placeholder="Nhập Mã nhân viên">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex col-sm-4">
-                                        Hình thức <span class="text-danger">*</span>
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <input class="form-control" type="text" placeholder="Nhập email công ty">
+                                        <input class="form-control" readonly type="text" value="10.000.000 VNĐ">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="d-flex col-sm-4">
-                                        Ngày thử việc <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Quỹ lương năm <span class="text-danger">*</span>
+                                        </div>
                                     </div>
                                     <div class="col-sm-8">
-                                        <input class="form-control" type="text" placeholder="Nhập Mã nhân viên">
+                                        <input class="form-control" readonly type="text" value="132.000.000 VNĐ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="d-flex col-sm-4">
+                                        <div class="modal_body-title">Quản lý trực tiếp <span class="text-danger">*</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <select class="selectpicker" title="Chọn quản lý">
+                                            <option>Nguyễn Ngọc Bảo</option>
+                                            <option>Đặng Nguyễn Lam Mai</option>
+                                            <option>Hồ Thị Hồng Vân</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex col-sm-4">
-                                        Ngày chính thức <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Trang bị hành chính <span class="text-danger">*</span></div>
                                     </div>
                                     <div class="col-sm-8">
-                                        <input class="form-control" type="text" placeholder="Nhập email công ty">
+                                        <select class="selectpicker" title="Chọn gói trang bị">
+                                            <option>Trang bị hành chính</option>
+                                            <option>Trang bị cơ bản</option>
+                                            <option>Trang bị Nhân viên</option>
+                                            <option>Trang bị Chuyên viên</option>
+                                            <option>Trang bị Quản lý</option>
+                                            <option>Trang bị Giám đốc</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="d-flex col-sm-4">
+                                        <div class="modal_body-title">Ngày thử việc <span class="text-danger">*</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input id="ngayThuViec" value="<?php echo date('d/m/Y'); ?>" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex col-sm-4">
+                                        <div class="modal_body-title">Ngày chính thức <span class="text-danger">*</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input id="ngayChinhThuc" value="<?php echo date('d/m/Y'); ?>" class="form-control" type="text">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 mb-3">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex col-sm-4">
-                                        Trạng thái làm việc <span class="text-danger">*</span>
+                                        <div class="modal_body-title">Trạng thái làm việc <span
+                                                class="text-danger">*</span></div>
                                     </div>
                                     <div class="col-sm-8">
-                                        <input class="form-control" type="text" placeholder="Nhập email công ty">
+                                        <select class="selectpicker" title="Chọn trạng thái">
+                                            <option>Đang làm việc</option>
+                                            <option>Đã nghỉ việc</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                        checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Gửi email kích hoạt tài khoản
-                                    </label>
-                                </div>
-                            </div>
-
 
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy</button>
                     <button type="button" class="btn btn-danger">Lưu</button>
                 </div>
             </div>
@@ -959,8 +1033,7 @@
     </div>
 
     <!-- Modal Them phong ban -->
-    <div class="modal fade" id="themPhongBan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-       >
+    <div class="modal fade" id="themPhongBan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" style="max-width: 38%">
             <div class="modal-content">
                 <div class="modal-header text-center">
@@ -972,7 +1045,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="d-flex col-sm-4">
-                                    Tên đơn vị <span class="text-danger">*</span>
+                                    <div class="modal_body-title">Tên đơn vị <span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" placeholder="Nhập Tên đơn vị">
@@ -983,7 +1056,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex col-sm-4">
-                                    Mã đơn vị <span class="text-danger">*</span>
+                                    <div class="modal_body-title">Mã đơn vị <span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" placeholder="Nhập Mã đơn vị">
@@ -993,7 +1066,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="d-flex col-sm-4">
-                                    Thuộc đơn vị <span class="text-danger">*</span>
+                                    <div class="modal_body-title">Thuộc đơn vị <span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" placeholder="Nhập Mã nhân viên">
@@ -1003,7 +1076,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex col-sm-4">
-                                    Cấp tổ chức <span class="text-danger">*</span>
+                                    <div class="modal_body-title">Cấp tổ chức <span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" placeholder="Nhập email công ty">
@@ -1013,7 +1086,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="d-flex col-sm-4">
-                                    Trưởng đơn vị <span class="text-danger">*</span>
+                                    <div class="modal_body-title">Trưởng đơn vị <span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" placeholder="Nhập Mã nhân viên">
@@ -1023,7 +1096,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex col-sm-4">
-                                    Trụ sở chính <span class="text-danger">*</span>
+                                    <div class="modal_body-title">Trụ sở chính <span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" placeholder="Nhập địa chỉ">
@@ -1033,7 +1106,7 @@
                         <div class="col-sm-12">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex col-sm-2">
-                                    Chức năng, nhiệm vụ<span class="text-danger">*</span>
+                                    <div class="modal_body-title">Chức năng <br> nhiệm vụ<span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-10">
                                     <input class="form-control" type="text" placeholder="Nhập Chức năng, nhiệm vụ">
@@ -1043,7 +1116,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy</button>
                     <button type="button" class="btn btn-danger">Lưu</button>
                 </div>
             </div>
@@ -1064,7 +1137,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="d-flex col-sm-4">
-                                    Mã vị trí<span class="text-danger">*</span>
+                                    <div class="modal_body-title">Mã vị trí<span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" placeholder="Nhập Tên đơn vị">
@@ -1075,7 +1148,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex col-sm-4">
-                                    Tên vị trí<span class="text-danger">*</span>
+                                    <div class="modal_body-title">Tên vị trí<span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" placeholder="Nhập Mã đơn vị">
@@ -1085,7 +1158,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="d-flex col-sm-4">
-                                    Phòng ban<span class="text-danger">*</span>
+                                    <div class="modal_body-title">Phòng ban<span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <select class="form-select" aria-label="Default select example">
@@ -1111,7 +1184,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex col-sm-4">
-                                    Chức danh<span class="text-danger">*</span>
+                                    <div class="modal_body-title">Chức danh<span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" placeholder="Nhập email công ty">
@@ -1121,7 +1194,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="d-flex col-sm-4">
-                                    Đơn vị công tác<span class="text-danger">*</span>
+                                    <div class="modal_body-title">Đơn vị công tác<span class="text-danger">*</span></div>
                                 </div>
                                 <div class="col-sm-8">
                                     <input class="form-control" type="text" placeholder="Nhập Mã nhân viên">
@@ -1131,7 +1204,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy</button>
                     <button type="button" class="btn btn-danger">Lưu</button>
                 </div>
             </div>
@@ -1148,269 +1221,325 @@
                 </div>
                 <div class="modal-body">
                     <div class="d-flex align-items-start">
-                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                          <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Trang bị cơ bản</button>
-                          <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Trang bị nhân viên</button>
-                          <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Trang bị chuyên viên</button>
-                          <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Trang bị quản lý</button>
-                          <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings2" type="button" role="tab" aria-controls="v-pills-settings2" aria-selected="false">Trang bị Giám đốc</button>
+                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-home" type="button" role="tab"
+                                aria-controls="v-pills-home" aria-selected="true">Trang bị cơ bản</button>
+                            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-profile" type="button" role="tab"
+                                aria-controls="v-pills-profile" aria-selected="false">Trang bị nhân viên</button>
+                            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-messages" type="button" role="tab"
+                                aria-controls="v-pills-messages" aria-selected="false">Trang bị chuyên viên</button>
+                            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-settings" type="button" role="tab"
+                                aria-controls="v-pills-settings" aria-selected="false">Trang bị quản lý</button>
+                            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-settings2" type="button" role="tab"
+                                aria-controls="v-pills-settings2" aria-selected="false">Trang bị Giám đốc</button>
                         </div>
                         <div class="tab-content" id="v-pills-tabContent">
-                          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="1" checked>
-                                <label class="form-check-label" for="1">
-                                    Hộp đựng bút
-                                </label>
-                              </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="2" checked>
-                                <label class="form-check-label" for="2">
-                                    Bàn ghế
-                                </label>
-                              </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="3" checked>
-                                <label class="form-check-label" for="3">
-                                    Áo phông Doppelherz
-                                </label>
-                              </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="4" checked>
-                                <label class="form-check-label" for="4">
-                                    Áo sơ mi Doppelherz
-                                </label>
-                              </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="5" checked>
-                                <label class="form-check-label" for="5">
-                                    Sổ tay
-                                </label>
-                              </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="6" checked>
-                                <label class="form-check-label" for="6">
-                                    Tủ
-                                </label>
-                              </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="7" checked>
-                                <label class="form-check-label" for="7">
-                                    Máy tính
-                                </label>
-                              </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="8" checked>
-                                <label class="form-check-label" for="8">
-                                    Ô tô
-                                </label>
-                              </div>
-                          </div>
-                          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                            <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="1" checked>
-    <label class="form-check-label" for="1">
-        Hộp đựng bút
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="2" checked>
-    <label class="form-check-label" for="2">
-        Bàn ghế
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="3" >
-    <label class="form-check-label" for="3">
-        Áo phông Doppelherz
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="4" >
-    <label class="form-check-label" for="4">
-        Áo sơ mi Doppelherz
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="5" >
-    <label class="form-check-label" for="5">
-        Sổ tay
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="6" checked>
-    <label class="form-check-label" for="6">
-        Tủ
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="7" checked>
-    <label class="form-check-label" for="7">
-        Máy tính
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="8" checked>
-    <label class="form-check-label" for="8">
-        Ô tô
-    </label>
-  </div>
-                          </div>
-                          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                            <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="1" checked>
-    <label class="form-check-label" for="1">
-        Hộp đựng bút
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="2" checked>
-    <label class="form-check-label" for="2">
-        Bàn ghế
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="3" checked>
-    <label class="form-check-label" for="3">
-        Áo phông Doppelherz
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="4" >
-    <label class="form-check-label" for="4">
-        Áo sơ mi Doppelherz
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="5" >
-    <label class="form-check-label" for="5">
-        Sổ tay
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="6" checked>
-    <label class="form-check-label" for="6">
-        Tủ
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="7" checked>
-    <label class="form-check-label" for="7">
-        Máy tính
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="8" checked>
-    <label class="form-check-label" for="8">
-        Ô tô
-    </label>
-  </div>
-                          </div>
-                          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                            <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="1" >
-    <label class="form-check-label" for="1">
-        Hộp đựng bút
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="2" >
-    <label class="form-check-label" for="2">
-        Bàn ghế
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="3" >
-    <label class="form-check-label" for="3">
-        Áo phông Doppelherz
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="4" checked>
-    <label class="form-check-label" for="4">
-        Áo sơ mi Doppelherz
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="5" checked>
-    <label class="form-check-label" for="5">
-        Sổ tay
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="6" checked>
-    <label class="form-check-label" for="6">
-        Tủ
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="7" checked>
-    <label class="form-check-label" for="7">
-        Máy tính
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="8" checked>
-    <label class="form-check-label" for="8">
-        Ô tô
-    </label>
-  </div>
-                          </div>
-                          <div class="tab-pane fade" id="v-pills-settings2" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                            <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="1" checked>
-    <label class="form-check-label" for="1">
-        Hộp đựng bút
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="2" checked>
-    <label class="form-check-label" for="2">
-        Bàn ghế
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="3" checked>
-    <label class="form-check-label" for="3">
-        Áo phông Doppelherz
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="4" checked>
-    <label class="form-check-label" for="4">
-        Áo sơ mi Doppelherz
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="5" checked>
-    <label class="form-check-label" for="5">
-        Sổ tay
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="6" checked>
-    <label class="form-check-label" for="6">
-        Tủ
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="7" checked>
-    <label class="form-check-label" for="7">
-        Máy tính
-    </label>
-  </div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="8" checked>
-    <label class="form-check-label" for="8">
-        Ô tô
-    </label>
-  </div>
-                          </div>
+                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                aria-labelledby="v-pills-home-tab">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="1" checked>
+                                    <label class="form-check-label" for="1">
+                                        Hộp đựng bút
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="2" checked>
+                                    <label class="form-check-label" for="2">
+                                        Bàn ghế
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="3" checked>
+                                    <label class="form-check-label" for="3">
+                                        Áo phông Doppelherz
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="4" checked>
+                                    <label class="form-check-label" for="4">
+                                        Áo sơ mi Doppelherz
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="5" checked>
+                                    <label class="form-check-label" for="5">
+                                        Sổ tay
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="6" checked>
+                                    <label class="form-check-label" for="6">
+                                        Tủ
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="7" checked>
+                                    <label class="form-check-label" for="7">
+                                        Máy tính
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="8" checked>
+                                    <label class="form-check-label" for="8">
+                                        Ô tô
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                aria-labelledby="v-pills-profile-tab">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="1" checked>
+                                    <label class="form-check-label" for="1">
+                                        Hộp đựng bút
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="2" checked>
+                                    <label class="form-check-label" for="2">
+                                        Bàn ghế
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="3">
+                                    <label class="form-check-label" for="3">
+                                        Áo phông Doppelherz
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="4">
+                                    <label class="form-check-label" for="4">
+                                        Áo sơ mi Doppelherz
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="5">
+                                    <label class="form-check-label" for="5">
+                                        Sổ tay
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="6" checked>
+                                    <label class="form-check-label" for="6">
+                                        Tủ
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="7" checked>
+                                    <label class="form-check-label" for="7">
+                                        Máy tính
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="8" checked>
+                                    <label class="form-check-label" for="8">
+                                        Ô tô
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                aria-labelledby="v-pills-messages-tab">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="1" checked>
+                                    <label class="form-check-label" for="1">
+                                        Hộp đựng bút
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="2" checked>
+                                    <label class="form-check-label" for="2">
+                                        Bàn ghế
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="3" checked>
+                                    <label class="form-check-label" for="3">
+                                        Áo phông Doppelherz
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="4">
+                                    <label class="form-check-label" for="4">
+                                        Áo sơ mi Doppelherz
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="5">
+                                    <label class="form-check-label" for="5">
+                                        Sổ tay
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="6" checked>
+                                    <label class="form-check-label" for="6">
+                                        Tủ
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="7" checked>
+                                    <label class="form-check-label" for="7">
+                                        Máy tính
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="8" checked>
+                                    <label class="form-check-label" for="8">
+                                        Ô tô
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                aria-labelledby="v-pills-settings-tab">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="1">
+                                    <label class="form-check-label" for="1">
+                                        Hộp đựng bút
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="2">
+                                    <label class="form-check-label" for="2">
+                                        Bàn ghế
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="3">
+                                    <label class="form-check-label" for="3">
+                                        Áo phông Doppelherz
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="4" checked>
+                                    <label class="form-check-label" for="4">
+                                        Áo sơ mi Doppelherz
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="5" checked>
+                                    <label class="form-check-label" for="5">
+                                        Sổ tay
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="6" checked>
+                                    <label class="form-check-label" for="6">
+                                        Tủ
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="7" checked>
+                                    <label class="form-check-label" for="7">
+                                        Máy tính
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="8" checked>
+                                    <label class="form-check-label" for="8">
+                                        Ô tô
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-settings2" role="tabpanel"
+                                aria-labelledby="v-pills-settings-tab">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="1" checked>
+                                    <label class="form-check-label" for="1">
+                                        Hộp đựng bút
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="2" checked>
+                                    <label class="form-check-label" for="2">
+                                        Bàn ghế
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="3" checked>
+                                    <label class="form-check-label" for="3">
+                                        Áo phông Doppelherz
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="4" checked>
+                                    <label class="form-check-label" for="4">
+                                        Áo sơ mi Doppelherz
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="5" checked>
+                                    <label class="form-check-label" for="5">
+                                        Sổ tay
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="6" checked>
+                                    <label class="form-check-label" for="6">
+                                        Tủ
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="7" checked>
+                                    <label class="form-check-label" for="7">
+                                        Máy tính
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                        id="8" checked>
+                                    <label class="form-check-label" for="8">
+                                        Ô tô
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Hủy</button>
                     <button type="button" class="btn btn-danger">Lưu</button>
                 </div>
             </div>
@@ -1506,4 +1635,9 @@
             }
         }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js">
+    </script>
+    <script src="{{ asset('assets/plugins/jquery-datetimepicker/custom-datetimepicker.js') }}"></script>
 @endsection

@@ -1,4 +1,4 @@
-@extends('template.header.master')
+@extends('template.master')
 {{-- Trang chủ admin --}}
 @section('title', 'Bảng điều khiển')
 @section('content')

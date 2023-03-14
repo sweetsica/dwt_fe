@@ -39,7 +39,6 @@
     .sidebarBody_select-wrapper .actions-btn,
     .sidebarBody_select-wrapper .bootstrap-select.show-tick .dropdown-menu li a span.text,
     .sidebarBody_select-wrapper .bootstrap-select .dropdown-toggle .filter-option-inner-inner,
-    .form-control,
     .bs-actionsbox .actions-btn {
         font-size: var(--fz-10);
     }
@@ -112,7 +111,6 @@
     .sidebarBody_select-wrapper .actions-btn,
     .sidebarBody_select-wrapper .bootstrap-select.show-tick .dropdown-menu li a span.text,
     .sidebarBody_select-wrapper .bootstrap-select .dropdown-toggle .filter-option-inner-inner,
-    .form-control,
     .bs-actionsbox .actions-btn {
         font-size: var(--fz-10);
     }
@@ -183,12 +181,13 @@
     .data_chart-items:last-child {
         padding-bottom: initial;
     }
-    .card-title,
-    .main_search input {
+    .card-title {
         font-size: var(--fz-14);
     }
+    
     .mainSection_table th,
     .mainSection_table td,
+    .main_search input,
     .mainSection_total-kpi,
     .sidebarBody_select-wrapper .bootstrap-select.show-tick .dropdown-menu li a span.text,
     .sidebarBody_select-wrapper .actions-btn,
