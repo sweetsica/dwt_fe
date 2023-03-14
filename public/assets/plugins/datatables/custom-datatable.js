@@ -67,6 +67,7 @@ Author url    :  https://publicsite.pro
             },
             dom: '<"dataTables_top justify-content-end"f>rt<"dataTables_bottom  justify-content-end"p>',
         });
+        
         $('#listDanhSach').DataTable({
             paging: true,
             ordering: true,

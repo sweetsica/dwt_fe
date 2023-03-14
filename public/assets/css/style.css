@@ -1,7 +1,4 @@
 /* OVERRIDE STYLE BOOTSTRAP */
-.form-select {
-    font-size: var(--fz-12);
-}
 
 label.col-form-label {
     font-size: 1.2rem;
@@ -43,7 +40,7 @@ label.col-form-label {
     border-radius: var(--border-radius-mini);
 }
 
-[contenteditable='true']:empty:before {
+[contenteditable="true"]:empty:before {
     content: attr(placeholder);
     pointer-events: none;
     display: block; /* For Firefox */
@@ -88,7 +85,7 @@ label.col-form-label {
 }
 
 /* (B2) HIDE CHECKBOX */
-.section input[type='checkbox'] {
+.section input[type="checkbox"] {
     display: none;
 }
 
@@ -107,7 +104,7 @@ label.col-form-label {
 }
 
 .section label:after {
-    content: '\0002B';
+    content: "\0002B";
     position: absolute;
     top: 8px;
     right: 0;
@@ -218,16 +215,17 @@ td {
 
 .info_wrapper {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .info_content {
     display: flex;
     padding-right: 6px;
+    font-size: var(--fz-12);
 }
 
 .info_label {
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .circle_tracking-wrapper {
@@ -385,7 +383,7 @@ div:not(.dataTables_scrollFoot)::-webkit-scrollbar {
 
 #khoLuuTruBienBanHop_filter .form-control,
 #khoLuuTruHopGiaoBan_filter .form-control {
-    background-image: url('../img/search-datatable.svg');
+    background-image: url("../img/search-datatable.svg");
     background-repeat: no-repeat;
     background-color: #fff;
     background-position: 2px 4px !important;
@@ -449,7 +447,7 @@ table.dataTable thead > tr > td.sorting_desc:before,
 table.dataTable thead > tr > td.sorting_asc_disabled:before,
 table.dataTable thead > tr > td.sorting_desc_disabled:before {
     bottom: 25%;
-    content: url('../img/sort_asc.png');
+    content: url("../img/sort_asc.png");
     right: 0;
 }
 table.dataTable thead > tr > th.sorting:after,
@@ -463,7 +461,7 @@ table.dataTable thead > tr > td.sorting_desc:after,
 table.dataTable thead > tr > td.sorting_asc_disabled:after,
 table.dataTable thead > tr > td.sorting_desc_disabled:after {
     top: 25%;
-    content: url('../img/sort_desc.png');
+    content: url("../img/sort_desc.png");
     right: 0;
 }
 table.dataTable thead > tr > th.sorting_asc:before,
@@ -525,12 +523,38 @@ th.dow {
 .datepicker table tr td.active.disabled:hover,
 .datepicker table tr td.active:hover {
     background-color: rgb(255, 112, 112);
-    background-image: -moz-linear-gradient(to bottom, rgb(255, 112, 112), var(--primary-color));
-    background-image: -ms-linear-gradient(to bottom, rgb(255, 112, 112), var(--primary-color));
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(255, 112, 112)), to(var(--primary-color)));
-    background-image: -webkit-linear-gradient(to bottom, rgb(255, 112, 112), var(--primary-color));
-    background-image: -o-linear-gradient(to bottom, rgb(255, 112, 112), var(--primary-color));
-    background-image: linear-gradient(to bottom, rgb(255, 112, 112), var(--primary-color));
+    background-image: -moz-linear-gradient(
+        to bottom,
+        rgb(255, 112, 112),
+        var(--primary-color)
+    );
+    background-image: -ms-linear-gradient(
+        to bottom,
+        rgb(255, 112, 112),
+        var(--primary-color)
+    );
+    background-image: -webkit-gradient(
+        linear,
+        0 0,
+        0 100%,
+        from(rgb(255, 112, 112)),
+        to(var(--primary-color))
+    );
+    background-image: -webkit-linear-gradient(
+        to bottom,
+        rgb(255, 112, 112),
+        var(--primary-color)
+    );
+    background-image: -o-linear-gradient(
+        to bottom,
+        rgb(255, 112, 112),
+        var(--primary-color)
+    );
+    background-image: linear-gradient(
+        to bottom,
+        rgb(255, 112, 112),
+        var(--primary-color)
+    );
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='#0044cc', GradientType=0);
     border-color: var(--primary-color) var(--primary-color) green;
@@ -605,7 +629,8 @@ th {
 
 .btn:hover {
     /* border-color: transparent; */
-    box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+    box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px,
+        rgb(0 0 0 / 8%) 0px 0px 0px 1px;
     outline: none;
 }
 
@@ -623,6 +648,7 @@ th {
 }
 .table > :not(caption) > * > * {
     padding: 4px 2px;
+    vertical-align: middle;
 }
 
 .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
@@ -638,12 +664,12 @@ th {
 }
 
 #timeStart:before {
-    content: 'Từ:';
+    content: "Từ:";
     margin-right: 0.6em;
     color: #9d9d9d;
 }
 #timeEnd:before {
-    content: 'Đến:';
+    content: "Đến:";
     margin-right: 0.6em;
     color: #9d9d9d;
 }
@@ -748,7 +774,7 @@ th {
     height: 100vh;
     background-color: var(--white-color);
     /* overflow: auto; */
-    padding-top: 60px;
+    padding-top: 56px;
 }
 
 .aside-left::-webkit-scrollbar-track,
@@ -872,7 +898,8 @@ th {
     padding: 6px;
     border-radius: var(--border-radius-main);
     background-color: var(--white-color-blur);
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .sidebarBody_card.bg-pink-blur {
@@ -898,7 +925,8 @@ th {
     background-color: var(--white-color-blur);
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .sidebarBody_mini-wrapper .sidebarBody_mini {
@@ -987,7 +1015,8 @@ th {
     padding: 4px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+    box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px,
+        rgb(0 0 0 / 8%) 0px 0px 0px 1px;
 }
 
 .sidebarBody_card-items-links {
@@ -1184,7 +1213,8 @@ th {
     right: 10px;
     border-radius: var(--border-radius-mini);
     background-color: var(--white-color-blur);
-    box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+    box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px,
+        rgb(0 0 0 / 8%) 0px 0px 0px 1px;
     padding: 0px 20px;
     text-align: center;
     font-size: var(--fz-14);
@@ -1280,7 +1310,7 @@ th {
 }
 
 .header_menu-list .header_menu-item > .header_menu-link:after {
-    content: '';
+    content: "";
     display: block;
     height: 1.5px;
     background-color: var(--primary-color);
@@ -1312,7 +1342,7 @@ th {
 }
 
 .header_menu-list > li > #header_submenu::before {
-    content: '';
+    content: "";
     border-width: 9px 35px;
     border-style: solid;
     border-color: transparent;
@@ -1466,4 +1496,81 @@ th {
     border-radius: 20px;
     border: solid 3px rgba(54, 162, 235, 1);
     background: white;
+}
+
+/* Modal */
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: var(--primary-color);
+}
+
+.nav-link,
+.nav-link:hover {
+    color: var(--primary-color);
+    text-align: left;
+    margin-bottom: 6px;
+    padding: 6px 6px;
+    font-size: var(--fz-12);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.modal-body .form-check-label {
+    font-size: var(--fz-12);
+}
+
+.modal-title {
+    font-size: var(--fz-14);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.create_user-title {
+    font-size: var(--fz-12);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.image-upload {
+    position: relative;
+    max-width: 360px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.image-upload input {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+}
+.upload-field {
+}
+
+.upload-field .file-thumbnail {
+    cursor: pointer;
+}
+
+.upload-field .file-thumbnail img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.upload-field .file-thumbnail h3 {
+    font-size: 12px;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.upload-field .file-thumbnail p {
+    font-size: 12px;
+    color: #9abcd1;
+    margin-bottom: 0;
 }

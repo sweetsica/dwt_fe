@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TotalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,11 +13,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 // Đăng nhập
 Route::get('/login', function () {
     return view('login');
@@ -26,3 +22,45 @@ Route::get('/login', function () {
 Route::get('/', function () {
     return view('dashboard');
 });
+
+// Cấu hình
+Route::get('ho-so-don-vi', function () {
+    return view('CauHinh.hoSoDonVi');
+});
+
+// Quản lý nhân sự
+
+// Họp đơn vị
+Route::get('giao-ban', function () {
+    return view('HopDonVi.giaoBan');
+});
+Route::get('tong-ket-tuan', function () {
+    return view('HopDonVi.tongKetTuan');
+});
+Route::get('tong-ket-thang', function () {
+    return view('HopDonVi.tongKetThang');
+});
+Route::get('kho-luu-tru-bien-ban-hop', function () {
+    return view('HopDonVi.khoLuuTruBienBanHop');
+});
+Route::get('bien-ban-hop', function () {
+    return view('HopDonVi.bienBanHop');
+});
+Route::get('khac', function () {
+    return ('Nothing');
+});
+
+// Kế hoạch & giao việc
+
+// DWT & KPI
+
+// Kiểm soát NV & CV
+
+// Xết duyệt
+
+// Đề xuất
+
+// VBDH
+
+// Orther
+

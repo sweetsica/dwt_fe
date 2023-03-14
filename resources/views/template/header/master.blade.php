@@ -1,8 +1,7 @@
-<?php 
+<?php
 
 //$template_path
-
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,10 +9,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> - THAI HUNG CORP</title>
+    <title>@yield('title') - THAI HUNG CORP</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{asset('assets/img/favicon.jpg')}}">
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.jpg') }}">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,25 +21,27 @@
         rel="stylesheet" />
 
     <!-- Vendor CSS Files -->
-    <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
-    <link href="{{asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet" />
+    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css" />
 
     <!-- Plugins -->
     <!-- <link rel="stylesheet"
-        href="<?php //echo $template_path?>assets/plugins/jquery-datetimepicker/bootstrap-datepicker.min.css"
+        href="<?php //echo $template_path
+        ?>assets/plugins/jquery-datetimepicker/bootstrap-datepicker.min.css"
         rel="stylesheet" />
-    <link rel="stylesheet" href="<?php //echo $template_path?>assets/plugins/jquery-datetimepicker/jquery.timepicker.css"
+    <link rel="stylesheet" href="<?php //echo $template_path
+    ?>assets/plugins/jquery-datetimepicker/jquery.timepicker.css"
         rel="stylesheet" /> -->
-    <link rel="stylesheet" href="{{asset('assets/plugins/jquery-datetimepicker/jquery.datetimepicker.css')}}"
+    <link rel="stylesheet" href="{{ asset('assets/plugins/jquery-datetimepicker/jquery.datetimepicker.css') }}"
         rel="stylesheet" />
 
     <!-- Base -->
-    <link rel="stylesheet" href="{{asset('assets/css/normalize.css')}}" />
-    <link rel="stylesheet" href="{{asset('assets/css/variables.css')}}" />
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}" />
-    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/normalize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/variables.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}" />
 </head>
 
 <body>
@@ -53,7 +54,7 @@
             <div class="container-fluid d-flex align-items-center justify-content-between">
                 <div class="header_logo">
                     <a href="/" class="navbar-brand d-flex align-items-center scrollto me-auto me-lg-0">
-                        <img class="header_logo" src="{{asset('assets/img/logo-thaihung-1.jpg')}}" />
+                        <img class="header_logo" src="{{ asset('assets/img/logo-thaihung-1.jpg') }}" />
                     </a>
                 </div>
 
@@ -69,8 +70,7 @@
                                 </a>
                                 <ul id="header_submenu">
                                     <li class="header_submenu-items">
-                                        <a href="co-cau-to-chuc" class="header_submenu-link">Cơ cấu tổ
-                                            chức</a>
+                                        <a href="ho-so-don-vi" class="header_submenu-link">Hồ sơ đơn vị</a>
                                     </li>
                                     <li class="header_submenu-items">
                                         <a href="ho-so-nhan-vien" class="header_submenu-link">Hồ sơ nhân viên</a>
@@ -102,8 +102,7 @@
                                 </a>
                                 <ul id="header_submenu">
                                     <li class="header_submenu-items">
-                                        <a href="quan-ly-tuyen-dung" class="header_submenu-link"
-                                           >Tuyển dụng</a>
+                                        <a href="quan-ly-tuyen-dung" class="header_submenu-link">Tuyển dụng</a>
                                     </li>
                                     <li class="header_submenu-items">
                                         <a href="#" class="header_submenu-link">Đánh giá nhân viên</a>
@@ -118,17 +117,19 @@
                                 </a>
                                 <ul id="header_submenu">
                                     <li class="header_submenu-items">
-                                        <a href="hop-giao-ban" class="header_submenu-link">Giao
+                                        <a href="giao-ban" class="header_submenu-link">Giao
                                             ban</a>
                                     </li>
                                     <li class="header_submenu-items">
-                                        <a href="hop-tuan" class="header_submenu-link">Tổng kết tuần</a>
+                                        <a href="tong-ket-tuan" class="header_submenu-link">Tổng kết
+                                            tuần</a>
                                     </li>
                                     <li class="header_submenu-items">
-                                        <a href="hop-thang" class="header_submenu-link">Tổng kết tháng</a>
+                                        <a href="tong-ket-thang" class="header_submenu-link">Tổng kết
+                                            tháng</a>
                                     </li>
                                     <li class="header_submenu-items">
-                                        <a href="" class="header_submenu-link">Khác</a>
+                                        <a href="khac" class="header_submenu-link">Khác</a>
                                     </li>
                                 </ul>
                             </li>
@@ -160,8 +161,7 @@
                                 </a>
                                 <ul id="header_submenu">
                                     <li class="header_submenu-items">
-                                        <a href="su-co-phat-sinh" class="header_submenu-link"
-                                           >Sự cố phát sinh</a>
+                                        <a href="su-co-phat-sinh" class="header_submenu-link">Sự cố phát sinh</a>
                                     </li>
                                     <li class="header_submenu-items">
                                         <a href="phan-anh" class="header_submenu-link">Phản ánh</a>
@@ -373,7 +373,7 @@
                     <div class="header_user dropdown">
                         <button class="dropdown-toggle" type="button" id="dropdownUser" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <img class="header_user-img" src="{{asset('assets/img/avatar.jpeg')}}" />
+                            <img class="header_user-img" src="{{ asset('assets/img/avatar.jpeg') }}" />
                         </button>
                         <ul class="dropdown-menu header_user-list" aria-labelledby="dropdownUser">
                             <li class="header_user-item">
@@ -402,36 +402,27 @@
         </header>
 
         <div class="pageWithSidebar">
-            @include('template.sidebar.sidebarMaster.sidebarLeft')
-            <div id="mainWrap" class="mainWrap">
-                <div class="mainSection">
-                    <div class="main">
-                        @yield('content')
-                    </div>
-                </div>
-            </div>
-            @include('template.sidebar.sidebarMaster.sidebarRight')
+            @yield('content')
         </div>
 
     </div><!-- End Wrapper -->
 
     <!-- Vendor JS Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="{{asset('/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('/assets/js/style.js')}}"></script>
-    <script
-        type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"
-    ></script>
-    
+    <script src="{{ asset('/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/style.js') }}"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+
     <!-- Plugins -->
-    <script src="{{asset('assets/plugins/jquery-repeater/repeater.min.js')}}"></script>
-    <script src="{{asset('assets/plugins/jquery-repeater/custom-repeater.js')}}"></script>
+    <script src="{{ asset('assets/plugins/jquery-repeater/repeater.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-repeater/custom-repeater.js') }}"></script>
     @yield('footer-script')
     <script>
-        $(function () {
+        $(function() {
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
-    </body>
-    </html>
+</body>
+
+</html>
